@@ -6,8 +6,8 @@
                         <div class="content content-narrow content-full">
                             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                                 <div class="flex-sm-fill">
-                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Dashboard</h1>
-                                    <h2 class="h4 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250">Welcome Administrator</h2>
+                                    <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Portal Elektro</h1>
+                                    <h2 class="h3 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250">Prodi Teknik Elektro <b>TEKNIK</b> <b>UNS</b></h2>
                                 </div>
                             </div>
                         </div>
@@ -54,179 +54,61 @@
                     </div>
                     <!-- END Stats -->
 
-                    <!-- Dashboard Charts -->
-                    <div class="row">
-                        	<!-- Latest Customers -->
-                        <div class="col-lg-12">
-                            <div class="block block-mode-loading-oneui">
-                                <div class="block-header border-bottom">
-                                    <h3 class="block-title">List Kerja Praktek</h3>
-                                    <div class="block-options">
-                                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                                            <i class="si si-refresh"></i>
-                                        </button>
-                                        <button type="button" class="btn-block-option">
-                                            <i class="si si-settings"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="block-content block-content-full">
-                                    <table class="table table-striped table-hover table-borderless table-vcenter font-size-sm mb-0">
-                                        <thead class="thead-dark">
-                                            <tr class="text-uppercase">
-                                                <th class="font-w700 text-center" style="width: 80px;">NIM</th>
-                                                <th class="font-w700 text-center">Name</th>
-                                                <th class="font-w700 text-center">Tempat KP</th>
-                                                <th class="font-w700 text-center">Alamat KP</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600 text-center">I0719011</span>
-                                                </td>
-                                                <td class="font-w600 text-center">
-                                                    Justin Hunt
-                                                </td>
-                                                <td class="font-w600 text-center">
-                                                    Startup
-                                                </td>
-                                                <td class="font-w600 text-center">
-                                                    Jakarta
-                                                </td>
-                                            </tr>
-                                            
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END Latest Customers -->
-                    </div>
-                    <!-- END Dashboard Charts -->
-                    <!-- Dashboard Charts -->
-                    <div class="row">
-                        	<!-- Latest Customers -->
-                        <div class="col-lg-12">
-                            <div class="block block-mode-loading-oneui">
-                                <div class="block-header border-bottom">
-                                    <h3 class="block-title">List Tugas Akhir</h3>
-                                    <div class="block-options">
-                                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                                            <i class="si si-refresh"></i>
-                                        </button>
-                                        <button type="button" class="btn-block-option">
-                                            <i class="si si-settings"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="block-content block-content-full">
-                                    <table class="table table-striped table-hover table-borderless table-vcenter font-size-sm mb-0">
-                                        <thead class="thead-dark">
-                                            <tr class="text-uppercase">
-                                                <th class="font-w700 text-center" style="width: 80px;">NIM</th>
-                                                <th class="font-w700 text-center">Name</th>
-                                                <th class="font-w700 text-center">Judul Tugas Akhir</th>
-                                                <th class="font-w700 text-center">Pembimbing 1</th>
-                                                <th class="font-w700 text-center">Pembimbing 2</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600 text-center">I0719011</span>
-                                                </td>
-                                                <td class="font-w600 text-center">
-                                                    Justin Hunt
-                                                </td>
-                                                <td class="font-w600 text-center">
-                                                    Hello World
-                                                </td>
-                                                <td class="font-w600 text-center">
-                                                    Sutrisno
-                                                </td>
-                                                <td class="font-w600 text-center">
-                                                    Meiyanto
-                                                </td>
-                                            </tr>
-                                            
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END Latest Customers -->
-                    </div>
-                    <!-- END Dashboard Charts -->
-                    
                     <!-- Dynamic Table with Export Buttons -->
                     <div class="block">
                         <div class="block-header">
-                            <h3 class="block-title">List <small>Tugas Akhir</small></h3>
+                            <h3 class="block-title">List <small>Kerja Praktek</small></h3>
                         </div>
                         <div class="block-content block-content-full">
                             <!-- DataTables init on table by adding .js-dataTable-buttons class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
-                            <table class="table table-bordered table-striped table-vcenter js-dataTable-buttons">
-                                <thead>
-                                    <tr class="text-uppercase">
-                                        <th class="font-w700 text-center" style="width: 80px;">NIM</th>
-                                        <th class="font-w700 text-center">Name</th>
-                                        <th class="font-w700 text-center">Judul Tugas Akhir</th>
-                                        <th class="font-w700 text-center">Pembimbing 1</th>
-                                        <th class="font-w700 text-center">Pembimbing 2</th>
+                            <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th class="text-center" style="width: 20px">No</th>
+                                        <th class="text-center" style="width: 80px;">NIM</th>
+                                        <th class="d-none d-sm-table-cell text-center">Name</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 30%;">Tempat</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 30%;">Alamat</th>
                                     </tr>
-                                    <!--tr>
-                                        <th class="text-center" style="width: 80px;">ID</th>
-                                        <th>Name</th>
-                                        <th class="d-none d-sm-table-cell" style="width: 30%;">Email</th>
-                                        <th class="d-none d-sm-table-cell" style="width: 15%;">Access</th>
-                                        <th style="width: 15%;">Registered</th>
-                                    </tr-->
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="text-center font-size-sm">I0716001</td>
-                                        <td class="font-w600 font-size-sm">
-                                            <a href="be_pages_generic_blank.html">Melissa Rice</a>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
                                         </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm">
-                                            client1<em class="text-muted">@example.com</em>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
                                         </td>
-                                        <td class="d-none d-sm-table-cell">
-                                            <span class="badge badge-danger">Disabled</span>
-                                        </td>
-                                        <td>
-                                            <em class="text-muted font-size-sm">9 days ago</em>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Mampang prpt, Kuningan, Jakarta Selatan
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-center font-size-sm">I0716002</td>
-                                        <td class="font-w600 font-size-sm">
-                                            <a href="be_pages_generic_blank.html">Judy Ford</a>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
                                         </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm">
-                                            client2<em class="text-muted">@example.com</em>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
                                         </td>
-                                        <td class="d-none d-sm-table-cell">
-                                            <span class="badge badge-info">Business</span>
-                                        </td>
-                                        <td>
-                                            <em class="text-muted font-size-sm">3 days ago</em>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Mampang prpt, Kuningan, Jakarta Selatan
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-center font-size-sm">I0716003</td>
-                                        <td class="font-w600 font-size-sm">
-                                            <a href="be_pages_generic_blank.html">Lisa Jenkins</a>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
                                         </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm">
-                                            client3<em class="text-muted">@example.com</em>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
                                         </td>
-                                        <td class="d-none d-sm-table-cell">
-                                            <span class="badge badge-info">Business</span>
-                                        </td>
-                                        <td>
-                                            <em class="text-muted font-size-sm">3 days ago</em>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Mampang prpt, Kuningan, Jakarta Selatan
                                         </td>
                                     </tr>
                                 </tbody>
@@ -234,378 +116,405 @@
                         </div>
                     </div>
                     <!-- END Dynamic Table with Export Buttons -->
-                    <div class="row">
-                    	<div class="col-lg-12">
-                    		
-                    	</div>
-                    </div>
 
-                    <!-- Customers and Latest Orders -->
-                    <div class="row row-deck">
-                        <!-- Latest Customers -->
-                        <div class="col-lg-6">
-                            <div class="block block-mode-loading-oneui">
-                                <div class="block-header border-bottom">
-                                    <h3 class="block-title">Latest Customers</h3>
-                                    <div class="block-options">
-                                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                                            <i class="si si-refresh"></i>
-                                        </button>
-                                        <button type="button" class="btn-block-option">
-                                            <i class="si si-settings"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="block-content block-content-full">
-                                    <table class="table table-striped table-hover table-borderless table-vcenter font-size-sm mb-0">
-                                        <thead class="thead-dark">
-                                            <tr class="text-uppercase">
-                                                <th class="font-w700" style="width: 80px;">ID</th>
-                                                <th class="d-none d-sm-table-cell font-w700 text-center" style="width: 100px;">Photo</th>
-                                                <th class="font-w700">Name</th>
-                                                <th class="d-none d-sm-table-cell font-w700 text-center" style="width: 80px;">Orders</th>
-                                                <th class="font-w700 text-center" style="width: 60px;"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#01368</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <img class="img-avatar img-avatar32" src="/kpta/assets/media/avatars/avatar10.jpg" alt="">
-                                                </td>
-                                                <td class="font-w600">
-                                                    Justin Hunt                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <a class="link-fx font-w600" href="javascript:void(0)">5</a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Edit">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#01368</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <img class="img-avatar img-avatar32" src="/kpta/assets/media/avatars/avatar2.jpg" alt="">
-                                                </td>
-                                                <td class="font-w600">
-                                                    Danielle Jones                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <a class="link-fx font-w600" href="javascript:void(0)">14</a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Edit">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#01368</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <img class="img-avatar img-avatar32" src="/kpta/assets/media/avatars/avatar14.jpg" alt="">
-                                                </td>
-                                                <td class="font-w600">
-                                                    Jack Greene                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <a class="link-fx font-w600" href="javascript:void(0)">15</a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Edit">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#01368</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <img class="img-avatar img-avatar32" src="/kpta/assets/media/avatars/avatar6.jpg" alt="">
-                                                </td>
-                                                <td class="font-w600">
-                                                    Lisa Jenkins                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <a class="link-fx font-w600" href="javascript:void(0)">36</a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Edit">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#01368</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <img class="img-avatar img-avatar32" src="/kpta/assets/media/avatars/avatar15.jpg" alt="">
-                                                </td>
-                                                <td class="font-w600">
-                                                    Brian Cruz                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <a class="link-fx font-w600" href="javascript:void(0)">3</a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Edit">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#01368</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <img class="img-avatar img-avatar32" src="/kpta/assets/media/avatars/avatar2.jpg" alt="">
-                                                </td>
-                                                <td class="font-w600">
-                                                    Carol White                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <a class="link-fx font-w600" href="javascript:void(0)">1</a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Edit">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#01368</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <img class="img-avatar img-avatar32" src="/kpta/assets/media/avatars/avatar11.jpg" alt="">
-                                                </td>
-                                                <td class="font-w600">
-                                                    Ralph Murray                                </td>
-                                                <td class="d-none d-sm-table-cell text-center">
-                                                    <a class="link-fx font-w600" href="javascript:void(0)">12</a>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Edit">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                    <!-- Dynamic Table with Export Buttons -->
+                    <div class="block">
+                        <div class="block-header">
+                            <h3 class="block-title">Seminar <small>Kerja Praktek</small></h3>
                         </div>
-                        <!-- END Latest Customers -->
-
-                        <!-- Latest Orders -->
-                        <div class="col-lg-6">
-                            <div class="block block-mode-loading-oneui">
-                                <div class="block-header border-bottom">
-                                    <h3 class="block-title">Latest Orders</h3>
-                                    <div class="block-options">
-                                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                                            <i class="si si-refresh"></i>
-                                        </button>
-                                        <button type="button" class="btn-block-option">
-                                            <i class="si si-settings"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="block-content block-content-full">
-                                    <table class="table table-striped table-hover table-borderless table-vcenter font-size-sm mb-0">
-                                        <thead class="thead-dark">
-                                            <tr class="text-uppercase">
-                                                <th class="font-w700">ID</th>
-                                                <th class="d-none d-sm-table-cell font-w700">Date</th>
-                                                <th class="font-w700">State</th>
-                                                <th class="d-none d-sm-table-cell font-w700 text-right" style="width: 120px;">Price</th>
-                                                <th class="font-w700 text-center" style="width: 60px;"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#07835</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell">
-                                                    <span class="font-size-sm text-muted">today</span>
-                                                </td>
-                                                <td>
-                                                    <span class="font-w600 text-warning">Pending..</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-right">
-                                                    $999,99
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Manage">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#07834</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell">
-                                                    <span class="font-size-sm text-muted">today</span>
-                                                </td>
-                                                <td>
-                                                    <span class="font-w600 text-warning">Pending..</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-right">
-                                                    $2.299,00
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Manage">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#07833</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell">
-                                                    <span class="font-size-sm text-muted">today</span>
-                                                </td>
-                                                <td>
-                                                    <span class="font-w600 text-success">Completed</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-right">
-                                                    $1200,00
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Manage">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#07832</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell">
-                                                    <span class="font-size-sm text-muted">today</span>
-                                                </td>
-                                                <td>
-                                                    <span class="font-w600 text-danger">Cancelled</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-right">
-                                                    $399,00
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Manage">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#07831</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell">
-                                                    <span class="font-size-sm text-muted">yesterday</span>
-                                                </td>
-                                                <td>
-                                                    <span class="font-w600 text-success">Completed</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-right">
-                                                    $349,00
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Manage">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#07830</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell">
-                                                    <span class="font-size-sm text-muted">yesterday</span>
-                                                </td>
-                                                <td>
-                                                    <span class="font-w600 text-success">Completed</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-right">
-                                                    $999,00
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Manage">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#07829</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell">
-                                                    <span class="font-size-sm text-muted">yesterday</span>
-                                                </td>
-                                                <td>
-                                                    <span class="font-w600 text-success">Completed</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-right">
-                                                    $39,99
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Manage">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#07828</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell">
-                                                    <span class="font-size-sm text-muted">yesterday</span>
-                                                </td>
-                                                <td>
-                                                    <span class="font-w600 text-success">Completed</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-right">
-                                                    $499,00
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Manage">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="font-w600">#07827</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell">
-                                                    <span class="font-size-sm text-muted">yesterday</span>
-                                                </td>
-                                                <td>
-                                                    <span class="font-w600 text-success">Completed</span>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell text-right">
-                                                    $325,00
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="left" title="Manage">
-                                                        <i class="fa fa-fw fa-pencil-alt"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                        <div class="block-content block-content-full">
+                            <!-- DataTables init on table by adding .js-dataTable-buttons class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
+                            <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th class="text-center">No</th>
+                                        <th class="text-center" style="width: 80px;">NIM</th>
+                                        <th class="d-none d-sm-table-cell text-center">Name</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 30%;">Judul Seminar</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 20%;">Pembimbing</th>
+                                        <th class="d-none d-sm-table-cell text-center">Jam Mulai</th>
+                                        <th class="d-none d-sm-table-cell text-center">Jam Selesai</th>
+                                        <th class="d-none d-sm-table-cell text-center">Tempat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            11.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            11.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            13.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 3
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- END Latest Orders -->
                     </div>
-                    <!-- END Customers and Latest Orders -->
+                    <!-- END Dynamic Table with Export Buttons -->
+                    
+                    <!-- Dynamic Table with Export Buttons -->
+                    <div class="block">
+                        <div class="block-header">
+                            <h3 class="block-title">Seminar Proposal<small>Tugas Akhir</small></h3>
+                        </div>
+                        <div class="block-content block-content-full">
+                            <!-- DataTables init on table by adding .js-dataTable-buttons class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
+                            <table class="table table-bordered table-striped table-vcenter js-dataTable-buttons">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th class="text-center">No</th>
+                                        <th class="text-center" style="width: 80px;">NIM</th>
+                                        <th class="d-none d-sm-table-cell text-center">Name</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 30%;">Judul Tugas Akhir</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 20%;">Pembimbing</th>
+                                        <th class="d-none d-sm-table-cell text-center">Jam Mulai</th>
+                                        <th class="d-none d-sm-table-cell text-center">Jam Selesai</th>
+                                        <th class="d-none d-sm-table-cell text-center">Tempat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            11.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            11.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            13.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 3
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END Dynamic Table with Export Buttons -->
+                    
+                    <!-- Dynamic Table with Export Buttons -->
+                    <div class="block">
+                        <div class="block-header">
+                            <h3 class="block-title">Seminar Hasil <small>Tugas Akhir</small></h3>
+                        </div>
+                        <div class="block-content block-content-full">
+                            <!-- DataTables init on table by adding .js-dataTable-buttons class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
+                            <table class="table table-bordered table-striped table-vcenter js-dataTable-buttons">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th class="text-center">No</th>
+                                        <th class="text-center" style="width: 80px;">NIM</th>
+                                        <th class="d-none d-sm-table-cell text-center">Name</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 30%;">Judul Tugas Akhir</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 20%;">Pembimbing</th>
+                                        <th class="d-none d-sm-table-cell text-center">Jam Mulai</th>
+                                        <th class="d-none d-sm-table-cell text-center">Jam Selesai</th>
+                                        <th class="d-none d-sm-table-cell text-center">Tempat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            11.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            11.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            13.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 3
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END Dynamic Table with Export Buttons -->
+                    
+                    <!-- Dynamic Table with Export Buttons -->
+                    <div class="block">
+                        <div class="block-header">
+                            <h3 class="block-title">Sidang <small>Tugas Akhir</small></h3>
+                        </div>
+                        <div class="block-content block-content-full">
+                            <!-- DataTables init on table by adding .js-dataTable-buttons class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
+                            <table class="table table-bordered table-striped table-vcenter js-dataTable-buttons">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th class="text-center">No</th>
+                                        <th class="text-center" style="width: 80px;">NIM</th>
+                                        <th class="d-none d-sm-table-cell text-center">Name</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 30%;">Judul Tugas Akhir</th>
+                                        <th class="d-none d-sm-table-cell text-center" style="width: 20%;">Pembimbing</th>
+                                        <th class="d-none d-sm-table-cell text-center">Jam Mulai</th>
+                                        <th class="d-none d-sm-table-cell text-center">Jam Selesai</th>
+                                        <th class="d-none d-sm-table-cell text-center">Tempat</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            11.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            11.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center font-size-sm text-center">1</td>
+                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                        <td class="font-w600 font-size-sm text-center">
+                                            <a href="#">Wahyu Kurniawan</a>
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Website Untuk Pengembangan
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            1. Sutrisno 
+                                            <br>
+                                            2. Meiyanto
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            12.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            13.00
+                                        </td>
+                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
+                                            Ruang Kelas 3
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END Dynamic Table with Export Buttons -->
+                    
+
+
                 </div>
                 <!-- END Page Content -->
 
