@@ -215,14 +215,20 @@
                         <li class="nav-main-heading">Panduan</li>
                         <li class="nav-main-item">
                             <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon si si-wrench"></i>
+                                <i class="nav-main-link-icon si si-doc"></i>
                                 <span class="nav-main-link-name">Panduan KP</span>
                             </a>
                         </li>
                         <li class="nav-main-item">
                             <a class="nav-main-link"aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon si si-wrench"></i>
+                                <i class="nav-main-link-icon si si-docs"></i>
                                 <span class="nav-main-link-name">Panduan TA</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" href="#">
+                                <i class="nav-main-link-icon si si-arrow-right"></i>
+                                <span class="nav-main-link-name">Login</span>
                             </a>
                         </li>
                     </ul>
