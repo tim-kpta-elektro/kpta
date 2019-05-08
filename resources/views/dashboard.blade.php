@@ -72,45 +72,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="text-center font-size-sm text-center">1</td>
-                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                	<?php $no=1; ?>
+				                    <?php foreach ($listkp as $row): ?>
+				                      <tr>
+				                      	<td class="text-center font-size-sm text-center">{{$no++}}</td>
+                                        <td class="text-center font-size-sm text-center">{{$row->nim}}</td>
                                         <td class="font-w600 font-size-sm text-center">
-                                            <a href="#">Wahyu Kurniawan</a>
+                                            <a href="#">{{$row->mhs_nama}}</a>
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Website Untuk Pengembangan
+                                            {{$row->perusahaan_nama}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Mampang prpt, Kuningan, Jakarta Selatan
+                                            {{$row->perusahaan_almt}}
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center font-size-sm text-center">1</td>
-                                        <td class="text-center font-size-sm text-center">I0715035</td>
-                                        <td class="font-w600 font-size-sm text-center">
-                                            <a href="#">Wahyu Kurniawan</a>
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Website Untuk Pengembangan
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Mampang prpt, Kuningan, Jakarta Selatan
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center font-size-sm text-center">1</td>
-                                        <td class="text-center font-size-sm text-center">I0715035</td>
-                                        <td class="font-w600 font-size-sm text-center">
-                                            <a href="#">Wahyu Kurniawan</a>
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Website Untuk Pengembangan
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Mampang prpt, Kuningan, Jakarta Selatan
-                                        </td>
-                                    </tr>
+				                      </tr>
+				                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

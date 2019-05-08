@@ -176,37 +176,70 @@
                         </li>
                         <li class="nav-main-heading">Kerja Praktek</li>
                         <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="/kpta/public/pengajuan">
+                                <i class="nav-main-link-icon si si-book-open"></i>
+                                <span class="nav-main-link-name">Pengajuan KP</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon si si-energy"></i>
-                                <span class="nav-main-link-name">Blocks</span>
+                                <span class="nav-main-link-name">Pelaksanaan Kerja Praktek</span>
                             </a>
                             <ul class="nav-main-submenu">
                                         <li class="nav-main-item">
-                                            <a class="nav-main-link" href="be_layout_page_default.html">
-                                                <span class="nav-main-link-name">Default</span>
+                                            <a class="nav-main-link" href="#">
+                                                <span class="nav-main-link-name">Cetak Lembar Tugas KP</span>
                                             </a>
                                         </li>
                                         <li class="nav-main-item">
-                                            <a class="nav-main-link" href="be_layout_page_flipped.html">
-                                                <span class="nav-main-link-name">Flipped</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-main-item">
-                                            <a class="nav-main-link" href="be_layout_page_native_scrolling.html">
-                                                <span class="nav-main-link-name">Native Scrolling</span>
+                                            <a class="nav-main-link" href="#">
+                                                <span class="nav-main-link-name">Cetak Form Nilai KP</span>
                                             </a>
                                         </li>
                             </ul>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="#">
+                                <i class="nav-main-link-icon si si-bag"></i>
+                                <span class="nav-main-link-name">Seminar KP</span>
+                            </a>
                         </li>
                         <li class="nav-main-heading">Tugas Akhir</li>
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon si si-wrench"></i>
-                                <span class="nav-main-link-name">Components</span>
+                                <span class="nav-main-link-name">Pengajuan Tugas Akhir</span>
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="be_comp_loaders.html">
+                                    <a class="nav-main-link" href="#">
+                                        <span class="nav-main-link-name">Loaders</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                                <i class="nav-main-link-icon si si-trophy"></i>
+                                <span class="nav-main-link-name">Seminar Hasil</span>
+                            </a>
+                            <ul class="nav-main-submenu">
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="#">
+                                        <span class="nav-main-link-name">Loaders</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                                <i class="nav-main-link-icon si si-graduation"></i>
+                                <span class="nav-main-link-name">Pendadaran</span>
+                            </a>
+                            <ul class="nav-main-submenu">
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="#">
                                         <span class="nav-main-link-name">Loaders</span>
                                     </a>
                                 </li>

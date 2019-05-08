@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+//Route Dashboard
+Route::get('/dashboard','HomeController@home');
+
+//Route Kerja Praktek
+Route::get('/pengajuan','PkpController@index');
