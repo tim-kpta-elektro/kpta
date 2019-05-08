@@ -10,9 +10,9 @@
 - Raihan
 - Rifai
 
-##Web Master
+## Web Master
 
--Sutrisno, S.T., M.Sc, Ph.D
+- Sutrisno, S.T., M.Sc, Ph.D
 
 ## About Laravel
 
