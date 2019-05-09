@@ -9,10 +9,13 @@ class HomeController extends Controller
 {
     public function home()
     {
-    	$listkp['listkp'] = DB::table('daftar_kp')
+    	$listkp = DB::table('daftar_kp')
     			->select('nim','mhs_nama','perusahaan_nama','perusahaan_almt')
     			->get();
 
-    	return view('dashboard',$listkp);
+    	$semkp = DB::table('seminar_kp')
+    			->select('*')->get();
+
+    	return view('dashboard',['listkp'=>$listkp,'semkp'=>$semkp]);
     }
 }

@@ -109,84 +109,41 @@
                                         <th class="d-none d-sm-table-cell text-center">Name</th>
                                         <th class="d-none d-sm-table-cell text-center" style="width: 30%;">Judul Seminar</th>
                                         <th class="d-none d-sm-table-cell text-center" style="width: 20%;">Pembimbing</th>
+                                        <th class="d-none d-sm-table-cell text-center">Tanggal Seminar</th>
                                         <th class="d-none d-sm-table-cell text-center">Jam Mulai</th>
                                         <th class="d-none d-sm-table-cell text-center">Jam Selesai</th>
                                         <th class="d-none d-sm-table-cell text-center">Tempat</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="text-center font-size-sm text-center">1</td>
-                                        <td class="text-center font-size-sm text-center">I0715035</td>
+                                	<?php $no=1; ?>
+				                    <?php foreach ($semkp as $row): ?>
+				                      <tr>
+                                        <td class="text-center font-size-sm text-center">{{$no++}}</td>
+                                        <td class="text-center font-size-sm text-center">{{$row->nim}}</td>
                                         <td class="font-w600 font-size-sm text-center">
-                                            <a href="#">Wahyu Kurniawan</a>
+                                            <a href="#">{{$row->mhs_nama}}</a>
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Website Untuk Pengembangan
+                                            {{$row->judul_sem}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
-                                            <br>
-                                            2. Meiyanto
+                                            {{$row->pembimbing}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            11.00
+                                            {{$row->tgl_sem}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            12.00
+                                            {{$row->jam_mulai}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Ruang Kelas 1
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center font-size-sm text-center">1</td>
-                                        <td class="text-center font-size-sm text-center">I0715035</td>
-                                        <td class="font-w600 font-size-sm text-center">
-                                            <a href="#">Wahyu Kurniawan</a>
+                                            {{$row->jam_selesai}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Website Untuk Pengembangan
+                                            {{$row->tempat}}
                                         </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
-                                            <br>
-                                            2. Meiyanto
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            11.00
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            12.00
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Ruang Kelas 2
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center font-size-sm text-center">1</td>
-                                        <td class="text-center font-size-sm text-center">I0715035</td>
-                                        <td class="font-w600 font-size-sm text-center">
-                                            <a href="#">Wahyu Kurniawan</a>
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Website Untuk Pengembangan
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
-                                            <br>
-                                            2. Meiyanto
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            12.00
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            13.00
-                                        </td>
-                                        <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            Ruang Kelas 3
-                                        </td>
-                                    </tr>
+				                      </tr>
+				                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

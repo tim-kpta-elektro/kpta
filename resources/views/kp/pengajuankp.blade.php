@@ -70,12 +70,12 @@
                                         </div>
                                     <h2 class="content-heading border-bottom mb-4 pb-2">Tanggal Pelaksanaan</h2>
                                         <div class="form-group">
-                                            <label for="Tanggal Mulai">Tanggal Dimulai KP</label>
-                                            <input type="text" class="form-control"name="tgl_mulai" placeholder="Masukkan Tanggal">
+                                        	<label for="Tanggal Mulai">Tanggal Dimulai KP</label>
+                                            <input type="text" class="js-datepicker form-control" id="example-datepicker3" name="tgl_mulai" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                         </div>
                                         <div class="form-group">
-                                            <label for="Tanggal Selesai">Tanggal Selesai KP</label>
-                                            <input type="text" class="form-control" name="tgl_selesai" placeholder="Masukkan Tanggal">
+                                        	<label for="Tanggal Mulai">Tanggal Selesai KP</label>
+                                            <input type="text" class="js-datepicker form-control" id="example-datepicker3" name="tgl_selesai" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary">Submit</button>
