@@ -35,7 +35,7 @@
                                 <div class="col-lg-3"></div>
                                 <div class="col-md-3 col-lg-6">
                                     <!-- Form Labels on top - Default Style -->
-                                    <form class="mb-5" action="be_forms_layouts.html" method="POST" onsubmit="return false;">
+                                    <form class="mb-5" action="" method="POST" onsubmit="return false;">
                                     <h2 class="content-heading border-bottom mb-4 pb-2">Data Diri</h2>
                                         <div class="form-group">
                                             <label for="Nama">Nama</label>
