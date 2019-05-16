@@ -20,3 +20,5 @@ Route::get('/dashboard','HomeController@home');
 
 //Route Kerja Praktek
 Route::get('/pengajuan','PkpController@index');
+Route::get('/pengajuan/cetak_surat','PkpController@cetak_surat');
+Route::get('/pengajuan/cetak_form','PkpController@cetak_form');
