@@ -22,3 +22,7 @@ Route::get('/dashboard','HomeController@home');
 Route::get('/pengajuan','PkpController@index');
 Route::get('/pengajuan/cetak_surat','PkpController@cetak_surat');
 Route::get('/pengajuan/cetak_form','PkpController@cetak_form');
+
+//Route Tugas Akhir
+Route::get('/ta/laporan/daftar_hadir_dosen','ta\LaporanController@daftar_hadir_dosen');
+Route::get('/ta/laporan/berita_acara','ta\LaporanController@berita_acara');
