@@ -29,5 +29,9 @@ Route::get('/ta/laporan/berita_acara','ta\LaporanController@berita_acara');
 
 	//Route Pendadaran
 	Route::get('/pendadaran/cetak_persetujuan','ta\PendadaranController@cetak_persetujuan');
+<<<<<<< HEAD
 	Route::get('/pendadaran/cetak_undangan','ta\PendadaranController@cetak_undang');
+=======
+	Route::get('/pendadaran/cetak_undangan','ta\PendadaranController@cetak_undangan');
+>>>>>>> master
 	Route::get('/pendadaran/cetak_bukti','ta\PendadaranController@cetak_bukti');

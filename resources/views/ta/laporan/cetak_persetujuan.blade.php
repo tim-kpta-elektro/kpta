@@ -111,7 +111,11 @@
                     <td style="width: 5%;"></td>
                     <td style="width: 22%;">Nama</td>
                     <td style="width: 3%;">:</td>
+<<<<<<< HEAD
                     <td style="width: 70%;">Kevin Sebastian</td>
+=======
+                    <td style="width: 70%;">Kevin Sebastian Arief</td>
+>>>>>>> master
                 </tr>
                 <tr>
                     <td></td>
@@ -123,7 +127,11 @@
                     <td></td>
                     <td>Waktu</td>
                     <td>:</td>
+<<<<<<< HEAD
                     <td>Senin, 20 Mei 2019 pukul 13:00 WIB<td>
+=======
+                    <td>Senin, 20 Mei 2019 jam 13:00 WIB<td>
+>>>>>>> master
                 </tr>
                 <tr>
                     <td></td>
@@ -156,7 +164,11 @@
                 </td>
             </tr>
             <tr>
+<<<<<<< HEAD
                 <td style="padding-left: 2%">NIP. 987000789</th>
+=======
+                <td style="padding-left: 2%">NIP. 999000999</th>
+>>>>>>> master
                 <td align="right" style="padding-right: 27%">NIM. I0716018</td>
             </tr>
             <tr>

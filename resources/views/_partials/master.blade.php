@@ -247,7 +247,11 @@
                             </ul>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
+<<<<<<< HEAD
                                     <a class="nav-main-link" href="/kpta/public/pendadaran/cetak_undang">
+=======
+                                    <a class="nav-main-link" href="/kpta/public/pendadaran/cetak_undangan">
+>>>>>>> master
                                         <span class="nav-main-link-name">Cetak Undangan Sidang Pendadaran Skripsi</span>
                                     </a>
                                 </li>

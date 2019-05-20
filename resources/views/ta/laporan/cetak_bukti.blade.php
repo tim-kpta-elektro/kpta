@@ -41,7 +41,11 @@
         .penguji th{
           background-color: #9da1aa;
           text-align: center;
+<<<<<<< HEAD
           padding: 8px;
+=======
+          padding: 10px;
+>>>>>>> master
         }
 
         table.ttd *{
@@ -57,7 +61,11 @@
         }
 
         footer p{
+<<<<<<< HEAD
           font-size: 11pt;
+=======
+          font-size: 12pt;
+>>>>>>> master
         }
 
         footer {
@@ -117,7 +125,11 @@
                     <td style="width: 5%;"></td>
                     <td style="width: 22%;">Nama</td>
                     <td style="width: 3%;">:</td>
+<<<<<<< HEAD
                     <td style="width: 70%;">Kevin Sebastian Arief</td>
+=======
+                    <td style="width: 70%;">Kevin Sebastian</td>
+>>>>>>> master
                 </tr>
                 <tr>
                     <td></td>
@@ -165,7 +177,11 @@
                 <tr>
                     <th style="width: 10%;">No</th>
                     <th style="width: 30%;">Nama Penguji</th>
+<<<<<<< HEAD
                     <th style="width: 35%;">Hari, tanggal penyerahan *)</th>
+=======
+                    <th style="width: 35%;">Hari, Tanggal Penyerahan *)</th>
+>>>>>>> master
                     <th style="width: 25%;">Tanda Tangan</th>
                 </tr>
                 <tr>
