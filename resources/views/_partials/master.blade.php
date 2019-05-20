@@ -240,7 +240,6 @@
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-<<<<<<< HEAD
                                     <a class="nav-main-link" href="/kpta/public/pendadaran/cetak_persetujuan">
                                         <span class="nav-main-link-name">Cetak Persetujuan Sidang Pendadaran dan Seminar</span>
                                     </a>
@@ -248,11 +247,7 @@
                             </ul>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-<<<<<<< HEAD
-                                    <a class="nav-main-link" href="/kpta/public/pendadaran/cetak_undang">
-=======
                                     <a class="nav-main-link" href="/kpta/public/pendadaran/cetak_undangan">
->>>>>>> master
                                         <span class="nav-main-link-name">Cetak Undangan Sidang Pendadaran Skripsi</span>
                                     </a>
                                 </li>
@@ -261,11 +256,6 @@
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="/kpta/public/pendadaran/cetak_bukti">
                                         <span class="nav-main-link-name">Cetak Bukti Penyerahan Undangan Sidang Pendadaran</span>
-=======
-                                    <a class="nav-main-link" href="#">
-                                        <span class="nav-main-link-name">Loaders</span>
->>>>>>> 87f9b0fa506a5bf87542e6c5b1069faab447a3c4
-                                    </a>
                                 </li>
                             </ul>
                         </li>

@@ -26,15 +26,9 @@ Route::get('/pengajuan/cetak_form','PkpController@cetak_form');
 //Route Tugas Akhir
 Route::get('/ta/laporan/daftar_hadir_dosen','ta\LaporanController@daftar_hadir_dosen');
 Route::get('/ta/laporan/berita_acara','ta\LaporanController@berita_acara');
-<<<<<<< HEAD
+
 
 	//Route Pendadaran
 	Route::get('/pendadaran/cetak_persetujuan','ta\PendadaranController@cetak_persetujuan');
-<<<<<<< HEAD
-	Route::get('/pendadaran/cetak_undangan','ta\PendadaranController@cetak_undang');
-=======
 	Route::get('/pendadaran/cetak_undangan','ta\PendadaranController@cetak_undangan');
->>>>>>> master
 	Route::get('/pendadaran/cetak_bukti','ta\PendadaranController@cetak_bukti');
-=======
->>>>>>> 87f9b0fa506a5bf87542e6c5b1069faab447a3c4
