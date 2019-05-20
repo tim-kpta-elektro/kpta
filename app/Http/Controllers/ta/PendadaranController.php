@@ -13,7 +13,7 @@ class PendadaranController extends Controller
     }
 
     public function cetak_undangan(){
-    	$pdf = PDF::loadview('/ta/laporan/cetak_undangan');
+    	$pdf = PDF::loadview('/ta/laporan/cetak_undang');
     	return $pdf->stream();
     }
 
