@@ -240,8 +240,22 @@
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="#">
-                                        <span class="nav-main-link-name">Loaders</span>
+                                    <a class="nav-main-link" href="/kpta/public/pendadaran/cetak_persetujuan">
+                                        <span class="nav-main-link-name">Cetak Persetujuan Sidang Pendadaran dan Seminar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav-main-submenu">
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="/kpta/public/pendadaran/cetak_undangan">
+                                        <span class="nav-main-link-name">Cetak Undangan Sidang Pendadaran Skripsi</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav-main-submenu">
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="/kpta/public/pendadaran/cetak_bukti">
+                                        <span class="nav-main-link-name">Cetak Bukti Penyerahan Undangan Sidang Pendadaran</span>
                                     </a>
                                 </li>
                             </ul>
