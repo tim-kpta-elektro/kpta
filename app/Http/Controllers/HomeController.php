@@ -3,19 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    public function home()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-    	$listkp = DB::table('daftar_kp')
-    			->select('nim','mhs_nama','perusahaan_nama','perusahaan_almt')
-    			->get();
+        $this->middleware('auth');
+    }
 
-    	$semkp = DB::table('seminar_kp')
-    			->select('*')->get();
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
+    }
 
-    	return view('dashboard',['listkp'=>$listkp,'semkp'=>$semkp]);
+    public function admin()
+    {
+        return view('admin');
     }
 }
