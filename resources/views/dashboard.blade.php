@@ -1,8 +1,8 @@
 @extends('_partials/master')
 @section('konten')
                 <!-- Hero -->
-                <div class="bg-image overflow-hidden" style="background-image: url('/kpta/assets/media/photos/photo34@2x.jpg');">
-                    <div class="bg-primary-dark-op">
+                <div class="bg-image overflow-hidden" style="background-image: url('/kpta/assets/media/photos/uns2.png');">
+                    <div class="">
                         <div class="content content-narrow content-full">
                             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                                 <div class="flex-sm-fill">
