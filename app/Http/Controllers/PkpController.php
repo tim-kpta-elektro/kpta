@@ -13,7 +13,12 @@ class PkpController extends Controller
     public function index()
     {
     	return view('kp/pengajuankp');
-    }
+	}
+	
+	public function seminarkp ()
+	{
+		return view('kp/seminarkp');
+	}
 
     public function store(Request $request)
 	{
@@ -47,6 +52,11 @@ class PkpController extends Controller
 	public function cetak_form()
 	{
 		$pdf = PDF::loadview('/kp/cetak_form');
+		return $pdf->stream();
+	}
+	public function cetak_daftarhadir()
+	{
+		$pdf = PDF::loadview('/kp/cetak_daftarhadir');
 		return $pdf->stream();
 	}
 }

@@ -22,3 +22,7 @@ Route::get('/dashboard','HomeController@home');
 Route::get('/pengajuan','PkpController@index');
 Route::get('/pengajuan/cetak_surat','PkpController@cetak_surat');
 Route::get('/pengajuan/cetak_form','PkpController@cetak_form');
+Route::get('/seminarkp','PkpController@seminarkp');
+Route::get('/seminarkp/cetak_surat_seminarkp','PkpController@cetak_surat_seminarkp');
+Route::get('/seminarkp/cetak_undangan','PkpController@cetak_undangan');
+Route::get('/seminarkp/cetak_daftarhadir','PkpController@cetak_daftarhadir');

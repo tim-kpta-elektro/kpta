@@ -201,10 +201,27 @@
                             </ul>
                         </li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="#">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="/kpta/public/seminarkp">
                                 <i class="nav-main-link-icon si si-bag"></i>
                                 <span class="nav-main-link-name">Seminar KP</span>
                             </a>
+                            <ul class="nav-main-submenu">
+                                        <li class="nav-main-item">
+                                            <a class="nav-main-link" href="#">
+                                                <span class="nav-main-link-name">Cetak Undangan Seminar KP</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-main-item">
+                                            <a class="nav-main-link" href="#">
+                                                <span class="nav-main-link-name">Cetak Undangan Seminar KP</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-main-item">
+                                            <a class="nav-main-link" href="/kpta/public/seminarkp/cetak_daftarhadir">
+                                                <span class="nav-main-link-name">Cetak Daftra Hadir Seminar KP</span>
+                                            </a>
+                                        </li>
+                            </ul>
                         </li>
                         <li class="nav-main-heading">Tugas Akhir</li>
                         <li class="nav-main-item">
