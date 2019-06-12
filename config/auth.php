@@ -46,26 +46,6 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
-
-        'admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
-        ],
-        
-        'adminkp' => [
-            'driver' => 'session',
-            'provider' => 'adminkps',
-        ],
-        
-        'adminta' => [
-            'driver' => 'session',
-            'provider' => 'admintas',
-        ],
-        
-        'dosen' => [
-            'driver' => 'session',
-            'provider' => 'dosens',
-        ],
     ],
 
     /*
@@ -89,26 +69,6 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
-        ],
-
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\Admin::class,
-        ],
-        
-        'adminkps' => [
-            'driver' => 'eloquent',
-            'model' => App\AdminKP::class,
-        ],
-        
-        'admintas' => [
-            'driver' => 'eloquent',
-            'model' => App\AdminTA::class,
-        ],
-        
-        'dosens' => [
-            'driver' => 'eloquent',
-            'model' => App\Dosen::class,
         ],
 
         // 'users' => [
@@ -135,30 +95,6 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-        ],
-
-        'admins' => [
-            'provider' => 'admins',
-            'table' => 'password_resets',
-            'expire' => 60,
-        ],
-        
-        'adminkps' => [
-            'provider' => 'adminkps',
-            'table' => 'password_resets',
-            'expire' => 60,
-        ],
-        
-        'admintas' => [
-            'provider' => 'admintas',
-            'table' => 'password_resets',
-            'expire' => 60,
-        ],
-        
-        'dosens' => [
-            'provider' => 'dosens',
             'table' => 'password_resets',
             'expire' => 60,
         ],
