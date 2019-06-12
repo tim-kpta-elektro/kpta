@@ -15,7 +15,7 @@ class User extends Controller
             return redirect('login')->with('alert','Kamu harus login dulu');
         }
         else if (Session::get('level')==2){
-            return view('admin');
+            return view('dashboard');
         }else{
         	return view('dashboard');
         }

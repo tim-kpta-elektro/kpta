@@ -8,6 +8,7 @@
                                 <div class="flex-sm-fill">
                                     <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Portal Elektro</h1>
                                     <h2 class="h3 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250">Prodi Teknik Elektro <b>TEKNIK</b> <b>UNS</b></h2>
+                                    <h3 class="font-w400 text-white-50 mb-0 invisible" data-toggle="appear">Halloo, {{Session::get('name')}}</h3>
                                 </div>
                             </div>
                         </div>

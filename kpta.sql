@@ -11,80 +11,11 @@
  Target Server Version : 100137
  File Encoding         : 65001
 
- Date: 23/05/2019 01:02:43
+ Date: 13/06/2019 01:05:29
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for adminkps
--- ----------------------------
-DROP TABLE IF EXISTS `adminkps`;
-CREATE TABLE `adminkps`  (
-  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp(0) NULL DEFAULT NULL,
-  `password` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `isAdmin` tinyint(1) NULL DEFAULT NULL,
-  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `created_at` timestamp(0) NULL DEFAULT NULL,
-  `updated_at` timestamp(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `adminkps_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of adminkps
--- ----------------------------
-INSERT INTO `adminkps` VALUES (1, 'AdminKP', 'adminkp@gmail.com', NULL, '$2y$10$tpwuH7mCh.L6.yoUboAyfuNMyJPpfMXRdsXQiHVTDXHFP5vGn3qEO', NULL, NULL, '2019-05-23 00:58:51', '2019-05-23 00:58:55');
-
--- ----------------------------
--- Table structure for admins
--- ----------------------------
-DROP TABLE IF EXISTS `admins`;
-CREATE TABLE `admins`  (
-  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp(0) NULL DEFAULT NULL,
-  `password` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `isAdmin` tinyint(1) NULL DEFAULT NULL,
-  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `created_at` timestamp(0) NULL DEFAULT NULL,
-  `updated_at` timestamp(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `admins_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of admins
--- ----------------------------
-INSERT INTO `admins` VALUES (1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$sfNZI7jaQ1V49UO9/5.W3e7Bba3aK9Sa37yjmSQ3d/CXyAhPYqLgW', NULL, NULL, '2019-05-23 00:08:17', '2019-05-23 00:08:21');
-
--- ----------------------------
--- Table structure for admintas
--- ----------------------------
-DROP TABLE IF EXISTS `admintas`;
-CREATE TABLE `admintas`  (
-  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp(0) NULL DEFAULT NULL,
-  `password` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `isAdmin` tinyint(1) NULL DEFAULT NULL,
-  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `created_at` timestamp(0) NULL DEFAULT NULL,
-  `updated_at` timestamp(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `admintas_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of admintas
--- ----------------------------
-INSERT INTO `admintas` VALUES (1, 'AdminTA', 'adminta@gmail.com', NULL, '$2y$10$6fHAqay71RXKXiw1tnRzf.oD7X2e0bLd7KD1K8JdgpbCLbINhDi16', NULL, NULL, '2019-05-23 00:57:33', '2019-05-23 00:57:37');
 
 -- ----------------------------
 -- Table structure for daftar_kp
@@ -156,29 +87,6 @@ CREATE TABLE `dosen`  (
 -- Records of dosen
 -- ----------------------------
 INSERT INTO `dosen` VALUES (119008293, 'A', 'aktif');
-
--- ----------------------------
--- Table structure for dosens
--- ----------------------------
-DROP TABLE IF EXISTS `dosens`;
-CREATE TABLE `dosens`  (
-  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp(0) NULL DEFAULT NULL,
-  `password` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `isAdmin` tinyint(1) NULL DEFAULT NULL,
-  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `created_at` timestamp(0) NULL DEFAULT NULL,
-  `updated_at` timestamp(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `dosens_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of dosens
--- ----------------------------
-INSERT INTO `dosens` VALUES (1, 'Dosen', 'dosen@gmail.com', NULL, '$2y$10$DthSBf01aIKzpJASmJiuN.93TaU8r/vPZkzMHGHvt8DDZyoinMirW', NULL, NULL, '2019-05-23 00:55:34', '2019-05-23 00:55:39');
 
 -- ----------------------------
 -- Table structure for kerjapraktek
@@ -419,17 +327,21 @@ CREATE TABLE `users`  (
   `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp(0) NULL DEFAULT NULL,
   `password` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `isAdmin` tinyint(1) NULL DEFAULT NULL,
+  `level` tinyint(2) NULL DEFAULT NULL,
   `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `users_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, 'User', 'user@gmail.com', NULL, '$2y$10$sfNZI7jaQ1V49UO9/5.W3e7Bba3aK9Sa37yjmSQ3d/CXyAhPYqLgW', NULL, NULL, '2019-05-22 17:06:13', '2019-05-22 17:06:13');
+INSERT INTO `users` VALUES (1, 'User', 'user@gmail.com', NULL, '$2y$10$sfNZI7jaQ1V49UO9/5.W3e7Bba3aK9Sa37yjmSQ3d/CXyAhPYqLgW', 1, NULL, '2019-05-22 17:06:13', '2019-05-22 17:06:13');
+INSERT INTO `users` VALUES (2, 'Admin', 'admin@gmail.com', NULL, '$2y$10$sfNZI7jaQ1V49UO9/5.W3e7Bba3aK9Sa37yjmSQ3d/CXyAhPYqLgW', 2, NULL, '2019-06-12 20:07:19', '2019-06-12 20:07:22');
+INSERT INTO `users` VALUES (3, 'AdminKP', 'adminkp@gmail.com', NULL, '$2y$10$sfNZI7jaQ1V49UO9/5.W3e7Bba3aK9Sa37yjmSQ3d/CXyAhPYqLgW', 3, NULL, '2019-06-13 00:40:25', '2019-06-13 00:40:28');
+INSERT INTO `users` VALUES (4, 'AdminTA', 'adminta@gmail.com', NULL, '$2y$10$sfNZI7jaQ1V49UO9/5.W3e7Bba3aK9Sa37yjmSQ3d/CXyAhPYqLgW', 4, NULL, '2019-06-13 00:40:52', '2019-06-13 00:40:54');
+INSERT INTO `users` VALUES (5, 'Dosen', 'dosen@gmail.com', NULL, '$2y$10$sfNZI7jaQ1V49UO9/5.W3e7Bba3aK9Sa37yjmSQ3d/CXyAhPYqLgW', 5, NULL, '2019-06-13 00:41:12', '2019-06-13 00:41:15');
 
 SET FOREIGN_KEY_CHECKS = 1;

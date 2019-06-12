@@ -23,8 +23,8 @@
                 <!-- Page Content -->
                 <div class="content">
                     <!-- Labels on top -->
-                    <a href="/kpta/public/pengajuan/cetak_surat" class="btn btn-primary" target="_blank">Cetak Surat Pengajuan KP</a>
-                    <a href="/kpta/public/pengajuan/cetak_form" class="btn btn-primary" target="_blank">Cetak Form Konsultasi KP</a>
+                    <a href="{{url('/pengajuan/cetak_surat')}}" class="btn btn-primary" target="_blank">Cetak Surat Pengajuan KP</a>
+                    <a href="{{url('/pengajuan/cetak_form')}}" class="btn btn-primary" target="_blank">Cetak Form Konsultasi KP</a>
                     <br><br>
                     <div class="block">
                         <div class="block-header">
