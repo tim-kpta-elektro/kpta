@@ -17,12 +17,16 @@ class User extends Controller
         else if (Session::get('level')==2){
             return view('admin');
         }else{
-        	return view('user');
+        	return view('dashboard');
         }
     }
 
     public function login(){
-        return view('login');
+    	if(Session::get('login')){
+            return redirect('dashboard');
+        }else{
+        	return view('login');
+        }
     }
 
     public function loginPost(Request $request){
@@ -37,7 +41,7 @@ class User extends Controller
                 Session::put('email',$data->email);
                 Session::put('login',TRUE);
                 Session::put('level',$data->level);
-                return redirect('home_user');
+                return redirect('dashboard');
             }
             else{
                 return redirect('login')->with('alert','Password atau Email, Salah !');
@@ -50,7 +54,7 @@ class User extends Controller
 
     public function logout(){
         Session::flush();
-        return redirect('login')->with('alert','Kamu sudah logout');
+        return redirect('/');
     }
 
     public function register(Request $request){

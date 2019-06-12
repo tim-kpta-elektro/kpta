@@ -206,6 +206,7 @@
                                 <span class="nav-main-link-name">Seminar KP</span>
                             </a>
                         </li>
+                        @if(\Session::get('level')==1)
                         <li class="nav-main-heading">Tugas Akhir</li>
                         <li class="nav-main-item">
                             <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="/kpta/public/ta/pengajuan">
@@ -213,6 +214,7 @@
                                 <span class="nav-main-link-name">Pengajuan TA</span>
                             </a>
                         </li>
+                        @endif
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon si si-wrench"></i>
@@ -342,7 +344,7 @@
                         <div class="dropdown d-inline-block ml-2">
                             <button type="button" class="btn btn-sm btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded" src="/kpta/assets/media/avatars/avatar9.jpg" alt="Header Avatar" style="width: 18px;">
-                                <span class="d-none d-sm-inline-block ml-1">Adam</span>
+                                <span class="d-none d-sm-inline-block ml-1">{{Session::get('name')}}</span>
                                 <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-user-dropdown">
@@ -375,7 +377,7 @@
                                         <span>Lock Account</span>
                                         <i class="si si-lock ml-1"></i>
                                     </a>
-                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="op_auth_signin.html">
+                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="logout">
                                         <span>Log Out</span>
                                         <i class="si si-logout ml-1"></i>
                                     </a>

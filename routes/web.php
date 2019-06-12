@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 //Route Dashboard
+//Route::resource('/dashboard','DashController');
+Route::get('/','Welcome@index');
 Route::get('/dashboard','DashController@home');
 
 //Route Kerja Praktek
