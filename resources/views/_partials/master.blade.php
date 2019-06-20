@@ -124,6 +124,7 @@
                                 <span class="nav-main-link-name">Dashboard</span>
                             </a>
                         </li>
+                        @if(\Session::get('level')==1)
                         <li class="nav-main-heading">Kerja Praktek</li>
                         <li class="nav-main-item">
                             <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
@@ -150,7 +151,7 @@
                             </ul>
                         </li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="/kpta/public/seminarkp">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/seminarkp')}}">
                                 <i class="nav-main-link-icon si si-bag"></i>
                                 <span class="nav-main-link-name">Seminar KP</span>
                             </a>
@@ -166,13 +167,12 @@
                                             </a>
                                         </li>
                                         <li class="nav-main-item">
-                                            <a class="nav-main-link" href="/kpta/public/seminarkp/cetak_daftarhadir">
+                                            <a class="nav-main-link" href="{{url('/kp/seminarkp/cetak_daftarhadir')}}">
                                                 <span class="nav-main-link-name">Cetak Daftar Hadir Seminar KP</span>
                                             </a>
                                         </li>
                             </ul>
                         </li>
-                        @if(\Session::get('level')==1)
                         <li class="nav-main-heading">Tugas Akhir</li>
                         <li class="nav-main-item">
                             <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/ta/pengajuan')}}">
@@ -180,7 +180,6 @@
                                 <span class="nav-main-link-name">Pengajuan TA</span>
                             </a>
                         </li>
-                        @endif
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon si si-wrench"></i>
@@ -230,6 +229,61 @@
                                 </li>
                             </ul>
                         </li>
+                        @endif
+                        @if(\Session::get('level')==2)
+                        <li class="nav-main-heading">Kerja Praktek</li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
+                                <i class="nav-main-link-icon si si-book-open"></i>
+                                <span class="nav-main-link-name">Buat User</span>
+                            </a>
+                        </li>
+                        @endif
+                        @if(\Session::get('level')==3)
+                        <li class="nav-main-heading">Kerja Praktek</li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
+                                <i class="nav-main-link-icon si si-book-open"></i>
+                                <span class="nav-main-link-name">Pembimbing KP</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
+                                <i class="nav-main-link-icon si si-book-open"></i>
+                                <span class="nav-main-link-name">Mahasiswa KP</span>
+                            </a>
+                        </li>
+                        @endif
+                        @if(\Session::get('level')==4)
+                        <li class="nav-main-heading">Tugas Akhir</li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
+                                <i class="nav-main-link-icon si si-book-open"></i>
+                                <span class="nav-main-link-name">Pembimbing TA</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
+                                <i class="nav-main-link-icon si si-book-open"></i>
+                                <span class="nav-main-link-name">Mahasiswa TA</span>
+                            </a>
+                        </li>
+                        @endif
+                        @if(\Session::get('level')==5)
+                        <li class="nav-main-heading">Kerja Praktek</li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
+                                <i class="nav-main-link-icon si si-book-open"></i>
+                                <span class="nav-main-link-name">Bimbingan KP</span>
+                            </a>
+                        </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
+                                <i class="nav-main-link-icon si si-book-open"></i>
+                                <span class="nav-main-link-name">Bimbingan TA</span>
+                            </a>
+                        </li>
+                        @endif
                     </ul>
                 </div>
                 <!-- END Side Navigation -->

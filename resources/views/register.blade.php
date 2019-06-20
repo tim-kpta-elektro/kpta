@@ -23,16 +23,26 @@
                             <form action="{{ url('/registerPost') }}" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="alamat">Name:</label>
+                                    <label for="alamat">Nama:</label>
                                     <input type="text"  class="form-control" id="name" name="name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="alamat">Username:</label>
-                                    <input type="text"  class="form-control" id="username" name="username">
+                                    <label for="alamat">NIM:</label>
+                                    <input type="text"  class="form-control" id="nim" name="nim">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email:</label>
                                     <input type="email" class="form-control" id="email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="level">Level:</label>
+                                    <select class="form-control" id="level" name="level">
+                                      <option value="1">Mahasiswa</option>
+                                      <option value="2">Admin</option>
+                                      <option value="3">AdminKP</option>
+                                      <option value="4">AdminTA</option>
+                                      <option value="5">Dosen</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat">Password:</label>

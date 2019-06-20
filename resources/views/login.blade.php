@@ -24,7 +24,7 @@
                             <form action="{{ url('/loginPost') }}" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="email">Username/Email:</label>
+                                    <label for="email">NIM/Email:</label>
                                     <input type="text" class="form-control" id="email" name="email">
                                 </div>
                                 <div class="form-group">
