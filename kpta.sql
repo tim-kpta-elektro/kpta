@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : DATABASE
+ Source Server         : Local
  Source Server Type    : MySQL
- Source Server Version : 100134
+ Source Server Version : 100137
  Source Host           : localhost:3306
  Source Schema         : kpta
 
  Target Server Type    : MySQL
- Target Server Version : 100134
+ Target Server Version : 100137
  File Encoding         : 65001
 
- Date: 20/06/2019 13:39:04
+ Date: 20/06/2019 14:38:35
 */
 
 SET NAMES utf8mb4;
@@ -752,7 +752,7 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users`  (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `username` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nim` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp(0) NULL DEFAULT NULL,
   `password` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -761,20 +761,20 @@ CREATE TABLE `users`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  UNIQUE INDEX `users_email_unique`(`email`) USING BTREE,
-  UNIQUE INDEX `usersname_unique`(`username`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+  UNIQUE INDEX `users_email_unique`(`email`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (1, 'User', 'user', 'user@gmail.com', NULL, '$2y$10$H5lplSB6JH.buWRRTgWyyOC6k91eeygfa2ZQuBQsHl3sU4jcYnxBK', 1, NULL, '2019-05-22 17:06:13', '2019-05-22 17:06:13');
-INSERT INTO `users` VALUES (2, 'Admin', 'admin', 'admin@gmail.com', NULL, '$2y$10$sfNZI7jaQ1V49UO9/5.W3e7Bba3aK9Sa37yjmSQ3d/CXyAhPYqLgW', 2, NULL, '2019-06-12 20:07:19', '2019-06-12 20:07:22');
-INSERT INTO `users` VALUES (3, 'AdminKP', 'adminkp', 'adminkp@gmail.com', NULL, '$2y$10$.9ViThRyZIxBQPeQheLGGOYRB9U6FcAAWbeQv16WNahjYSLjsBqOC', 3, NULL, '2019-06-13 00:40:25', '2019-06-13 00:40:28');
-INSERT INTO `users` VALUES (4, 'AdminTA', 'adminta', 'adminta@gmail.com', NULL, '$2y$10$607szHy0WQhyBlOC9z7Dd.WSYdKSiOVDwv2GKAwM8d1ltF7NiEiUW', 4, NULL, '2019-06-13 00:40:52', '2019-06-13 00:40:54');
-INSERT INTO `users` VALUES (5, 'Dosen', 'dosen', 'dosen@gmail.com', NULL, '$2y$10$dUpJDD3p2VhSeF4XjFy/.eZ9HfOMMIl26Iba3km.J6OiKhLYd/u4K', 5, NULL, '2019-06-13 00:41:12', '2019-06-13 00:41:15');
-INSERT INTO `users` VALUES (6, 'Kevin Sebastian', 'kevin', 'kevin@gmail.com', NULL, '$2y$10$BOuqAGYbl.scnP9y9kuT8.TyhWdO.L0OBh5NzlNB6iQ2LUEl6uZxC', 1, NULL, '2019-06-19 23:41:48', '2019-06-19 23:41:51');
-INSERT INTO `users` VALUES (7, 'Yudhi Kusuma', 'yudhi', 'yudhi@gmail.com', NULL, '$2y$10$dYXD6atlRz7d8AIy57jhy.GVl7tnmwfTlBroSNQfTlrZ1EOd0ysXe', 1, NULL, '2019-06-19 12:37:17', '2019-06-19 12:37:17');
-INSERT INTO `users` VALUES (8, 'Adip Safiudin', 'adip', 'adip@gmail.com', NULL, '$2y$10$3bpoyRNnqs01V0ihPEObjeHnW9LVBPteeHIAdKJitdLbLo1eKTh2.', 1, NULL, '2019-06-19 12:39:36', '2019-06-19 12:39:36');
+INSERT INTO `users` VALUES (1, 'User', '', 'user@gmail.com', NULL, '$2y$10$H5lplSB6JH.buWRRTgWyyOC6k91eeygfa2ZQuBQsHl3sU4jcYnxBK', 1, NULL, '2019-05-22 17:06:13', '2019-05-22 17:06:13');
+INSERT INTO `users` VALUES (2, 'Admin', '', 'admin@gmail.com', NULL, '$2y$10$sfNZI7jaQ1V49UO9/5.W3e7Bba3aK9Sa37yjmSQ3d/CXyAhPYqLgW', 2, NULL, '2019-06-12 20:07:19', '2019-06-12 20:07:22');
+INSERT INTO `users` VALUES (3, 'AdminKP', '', 'adminkp@gmail.com', NULL, '$2y$10$.9ViThRyZIxBQPeQheLGGOYRB9U6FcAAWbeQv16WNahjYSLjsBqOC', 3, NULL, '2019-06-13 00:40:25', '2019-06-13 00:40:28');
+INSERT INTO `users` VALUES (4, 'AdminTA', '', 'adminta@gmail.com', NULL, '$2y$10$607szHy0WQhyBlOC9z7Dd.WSYdKSiOVDwv2GKAwM8d1ltF7NiEiUW', 4, NULL, '2019-06-13 00:40:52', '2019-06-13 00:40:54');
+INSERT INTO `users` VALUES (5, 'Dosen', '', 'dosen@gmail.com', NULL, '$2y$10$dUpJDD3p2VhSeF4XjFy/.eZ9HfOMMIl26Iba3km.J6OiKhLYd/u4K', 5, NULL, '2019-06-13 00:41:12', '2019-06-13 00:41:15');
+INSERT INTO `users` VALUES (6, 'Kevin Sebastian', 'I0716018', 'kevin@gmail.com', NULL, '$2y$10$BOuqAGYbl.scnP9y9kuT8.TyhWdO.L0OBh5NzlNB6iQ2LUEl6uZxC', 1, NULL, '2019-06-19 23:41:48', '2019-06-19 23:41:51');
+INSERT INTO `users` VALUES (7, 'Yudhi Kusuma', 'I0716034', 'yudhi@gmail.com', NULL, '$2y$10$dYXD6atlRz7d8AIy57jhy.GVl7tnmwfTlBroSNQfTlrZ1EOd0ysXe', 1, NULL, '2019-06-19 12:37:17', '2019-06-19 12:37:17');
+INSERT INTO `users` VALUES (8, 'Adip Safiudin', 'I0716001', 'adip@gmail.com', NULL, '$2y$10$3bpoyRNnqs01V0ihPEObjeHnW9LVBPteeHIAdKJitdLbLo1eKTh2.', 1, NULL, '2019-06-19 12:39:36', '2019-06-19 12:39:36');
+INSERT INTO `users` VALUES (9, 'Raihan', 'I0717005', 'raihan@gmail.com', NULL, '$2y$10$GzcIROkvPvGcPoepHZplvOB/IlP5/dj5JzxlHFIlilA6MOHpxVoRa', 1, NULL, '2019-06-20 07:16:51', '2019-06-20 07:16:51');
 
 SET FOREIGN_KEY_CHECKS = 1;
