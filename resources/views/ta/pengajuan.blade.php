@@ -36,13 +36,21 @@
                                     <h2 class="content-heading border-bottom mb-4 pb-2">Data Diri</h2>
                                         <div class="form-group">
                                             <label for="Nama">Nama</label>
-                                            <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Anda..">
+                                            <input type="text" class="form-control" name="nama" disabled>
                                         </div>
                                         <div class="form-group">
                                             <label for="Nim">NIM</label>
-                                            <input type="text" class="form-control"name="nim" placeholder="Masukkan NIM Anda..">
+                                            <input type="text" class="form-control"name="nim" disabled>
                                         </div>
                                     <h2 class="content-heading border-bottom mb-4 pb-2">Data Akademik</h2>
+                                        <div class="form-group">
+                                            <label for="IPK">Jumlah SKS</label>
+                                            <input type="text" class="form-control" name="sks" disabled>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="IPK">IPK Sementara</label>
+                                            <input type="text" class="form-control" name="ipk" disabled>
+                                        </div>
                                         <div class="form-group">
                                             <label for="sks">Bidang Keahlian</label>
                                             <select class="form-control" name="keahlian" id="">
@@ -51,14 +59,6 @@
                                                 <option value="SIE">Sistem Isyarat dan Elektronik</option>
                                                 <option value="SKI">Sistem Komputer Informatika</option>
                                             </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="IPK">Jumlah SKS</label>
-                                            <input type="text" class="form-control" name="sks" placeholder="Masukkan Jumlah SKS Anda..">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="IPK">IPK Sementara</label>
-                                            <input type="text" class="form-control" name="ipk" placeholder="Masukkan IPK Sementara Anda..">
                                         </div>
                                     <h2 class="content-heading border-bottom mb-4 pb-2">Data Tugas Akhir</h2>
                                         <div class="form-group">
@@ -70,10 +70,10 @@
                                             <textarea type="text" class="form-control" name="abstrak" placeholder="Masukkan Abstrak Anda.."></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label for="nama perusahaan">Mata Kuliah Pilihan Pendukung</label>
-                                            <input type="text" class="form-control" name="ipk" placeholder="Pendukung 1"><br>
-                                            <input type="text" class="form-control" name="ipk" placeholder="Pendukung 2"><br>
-                                            <input type="text" class="form-control" name="ipk" placeholder="Pendukung 3">
+                                            <label for="MK Pendukung">Mata Kuliah Pilihan Pendukung</label>
+                                            <input type="text" class="form-control" name="mk1" placeholder="MK Pendukung 1"><br>
+                                            <input type="text" class="form-control" name="mk2" placeholder="MK Pendukung 2"><br>
+                                            <input type="text" class="form-control" name="mk3" placeholder="MK Pendukung 3">
                                         </div>
                                         <div class="form-group">
                                             <label for="sks">Pembimbing 1 Tugas Akhir</label>
@@ -91,15 +91,20 @@
                                         </div>
                                     <h2 class="content-heading border-bottom mb-4 pb-2">Tanggal Pengajuan</h2>
                                         <div class="form-group">
-                                        	<label for="Tanggal Mulai">Tanggal Pengajuan TA</label>
+                                        	<label for="tgl_pengajuan">Tanggal Pengajuan TA</label>
                                             <input type="text" class="js-datepicker form-control" id="example-datepicker3" name="tgl_mulai" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                         </div>
+                                        <br>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                             <button type="submit" class="btn btn-danger">Cancel</button>
                                         </div>
                                     </form>
                                     <!-- END Form Labels on top - Default Style -->
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
                                 </div>
                             </div>
                         </div>
