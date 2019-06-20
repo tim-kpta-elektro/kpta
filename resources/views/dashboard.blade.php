@@ -1,13 +1,14 @@
 @extends('_partials/master')
 @section('konten')
                 <!-- Hero -->
-                <div class="bg-image overflow-hidden" style="background-image: url('/kpta/assets/media/photos/photo3@2x.jpg');">
-                    <div class="bg-primary-dark-op">
+                <div class="bg-image overflow-hidden" style="background-image: url('/kpta/assets/media/photos/uns2.png');">
+                    <div class="">
                         <div class="content content-narrow content-full">
                             <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center mt-5 mb-2 text-center text-sm-left">
                                 <div class="flex-sm-fill">
                                     <h1 class="font-w600 text-white mb-0 invisible" data-toggle="appear">Portal Elektro</h1>
                                     <h2 class="h3 font-w400 text-white-75 mb-0 invisible" data-toggle="appear" data-timeout="250">Prodi Teknik Elektro <b>TEKNIK</b> <b>UNS</b></h2>
+                                    <h3 class="font-w400 text-white-50 mb-0 invisible" data-toggle="appear">Halloo, {{Session::get('name')}}</h3>
                                 </div>
                             </div>
                         </div>
@@ -22,32 +23,32 @@
                         <div class="col-6 col-md-3 col-lg-6 col-xl-3">
                             <a class="block block-rounded block-link-pop border-left border-primary border-4x" href="javascript:void(0)">
                                 <div class="block-content block-content-full">
-                                    <div class="font-size-sm font-w600 text-uppercase text-muted">Visitors</div>
-                                    <div class="font-size-h2 font-w400 text-dark">120,580</div>
+                                    <div class="font-size-sm font-w600 text-uppercase text-muted">Pengunjung</div>
+                                    <div class="font-size-h2 font-w400 text-dark">120</div>
                                 </div>
                             </a>
                         </div>
                         <div class="col-6 col-md-3 col-lg-6 col-xl-3">
                             <a class="block block-rounded block-link-pop border-left border-primary border-4x" href="javascript:void(0)">
                                 <div class="block-content block-content-full">
-                                    <div class="font-size-sm font-w600 text-uppercase text-muted">Sales</div>
-                                    <div class="font-size-h2 font-w400 text-dark">150</div>
+                                    <div class="font-size-sm font-w600 text-uppercase text-muted">Total Mahasiswa</div>
+                                    <div class="font-size-h2 font-w400 text-dark">{{$jumhs}}</div>
                                 </div>
                             </a>
                         </div>
                         <div class="col-6 col-md-3 col-lg-6 col-xl-3">
                             <a class="block block-rounded block-link-pop border-left border-primary border-4x" href="javascript:void(0)">
                                 <div class="block-content block-content-full">
-                                    <div class="font-size-sm font-w600 text-uppercase text-muted">Earnings</div>
-                                    <div class="font-size-h2 font-w400 text-dark">$3,200</div>
+                                    <div class="font-size-sm font-w600 text-uppercase text-muted">Mahasiswa Aktif</div>
+                                    <div class="font-size-h2 font-w400 text-dark">{{$mhs_aktif}}</div>
                                 </div>
                             </a>
                         </div>
                         <div class="col-6 col-md-3 col-lg-6 col-xl-3">
                             <a class="block block-rounded block-link-pop border-left border-primary border-4x" href="javascript:void(0)">
                                 <div class="block-content block-content-full">
-                                    <div class="font-size-sm font-w600 text-uppercase text-muted">Avg Sale</div>
-                                    <div class="font-size-h2 font-w400 text-dark">$21</div>
+                                    <div class="font-size-sm font-w600 text-uppercase text-muted">Alumni</div>
+                                    <div class="font-size-h2 font-w400 text-dark">{{$mhs_lulus}}</div>
                                 </div>
                             </a>
                         </div>
@@ -149,7 +150,7 @@
                         </div>
                     </div>
                     <!-- END Dynamic Table with Export Buttons -->
-                    
+
                     <!-- Dynamic Table with Export Buttons -->
                     <div class="block">
                         <div class="block-header">
@@ -181,7 +182,7 @@
                                             Website Untuk Pengembangan
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
+                                            1. Sutrisno
                                             <br>
                                             2. Meiyanto
                                         </td>
@@ -205,7 +206,7 @@
                                             Website Untuk Pengembangan
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
+                                            1. Sutrisno
                                             <br>
                                             2. Meiyanto
                                         </td>
@@ -229,7 +230,7 @@
                                             Website Untuk Pengembangan
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
+                                            1. Sutrisno
                                             <br>
                                             2. Meiyanto
                                         </td>
@@ -248,7 +249,7 @@
                         </div>
                     </div>
                     <!-- END Dynamic Table with Export Buttons -->
-                    
+
                     <!-- Dynamic Table with Export Buttons -->
                     <div class="block">
                         <div class="block-header">
@@ -280,7 +281,7 @@
                                             Website Untuk Pengembangan
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
+                                            1. Sutrisno
                                             <br>
                                             2. Meiyanto
                                         </td>
@@ -304,7 +305,7 @@
                                             Website Untuk Pengembangan
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
+                                            1. Sutrisno
                                             <br>
                                             2. Meiyanto
                                         </td>
@@ -328,7 +329,7 @@
                                             Website Untuk Pengembangan
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
+                                            1. Sutrisno
                                             <br>
                                             2. Meiyanto
                                         </td>
@@ -347,7 +348,7 @@
                         </div>
                     </div>
                     <!-- END Dynamic Table with Export Buttons -->
-                    
+
                     <!-- Dynamic Table with Export Buttons -->
                     <div class="block">
                         <div class="block-header">
@@ -379,7 +380,7 @@
                                             Website Untuk Pengembangan
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
+                                            1. Sutrisno
                                             <br>
                                             2. Meiyanto
                                         </td>
@@ -403,7 +404,7 @@
                                             Website Untuk Pengembangan
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
+                                            1. Sutrisno
                                             <br>
                                             2. Meiyanto
                                         </td>
@@ -427,7 +428,7 @@
                                             Website Untuk Pengembangan
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            1. Sutrisno 
+                                            1. Sutrisno
                                             <br>
                                             2. Meiyanto
                                         </td>
@@ -446,7 +447,7 @@
                         </div>
                     </div>
                     <!-- END Dynamic Table with Export Buttons -->
-                    
+
 
 
                 </div>

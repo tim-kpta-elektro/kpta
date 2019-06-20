@@ -1,15 +1,26 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\kp;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
 use App\PengajuanKP;
-
 use PDF;
 
 class PkpController extends Controller
 {
+
+	public function __construct()
+	{
+        $this->middleware(function ($request, $next) {
+	        if(!Session::get('login')){
+	            return redirect('login')->with('alert','Kamu harus login dulu');
+	        }else{
+	            return $next($request);
+	        }
+    	});
+	}
+
     public function index()
     {
     	return view('kp/pengajuankp');
@@ -20,7 +31,7 @@ class PkpController extends Controller
 		return view('kp/seminarkp');
 	}
 
-    public function store(Request $request)
+    public function pengajuankpPost(Request $request)
 	{
 		// insert data ke table pegawai
 		DB::table('daftar_kp')->insert([

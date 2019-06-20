@@ -23,8 +23,8 @@
                 <!-- Page Content -->
                 <div class="content">
                     <!-- Labels on top -->
-                    <a href="" class="btn btn-primary" target="_blank">Cetak Surat Pengajuan Seminar KP</a>
-                    <a href="" class="btn btn-primary" target="_blank">Cetak Undangan Seminar KP</a>
+                    <a href="x" class="btn btn-primary" target="_blank">Cetak Form Pengajuan Seminar KP</a>
+                    <a href="x" class="btn btn-primary" target="_blank">Cetak Undangan Seminar KP</a>
                     <a href="/kpta/public/seminarkp/cetak_daftarhadir" class="btn btn-primary" target="_blank">Cetak Daftar Hadir Seminar KP</a>
                     <br><br>
                     <div class="block">

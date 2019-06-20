@@ -6,18 +6,6 @@
 
         <title>Portal Teknik Elektro UNS</title>
 
-        <meta name="description" content="OneUI - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
-        <meta name="author" content="pixelcave">
-        <meta name="robots" content="noindex, nofollow">
-
-        <!-- Open Graph Meta -->
-        <meta property="og:title" content="OneUI - Bootstrap 4 Admin Template &amp; UI Framework">
-        <meta property="og:site_name" content="OneUI">
-        <meta property="og:description" content="OneUI - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="">
-        <meta property="og:image" content="">
-
         <!-- Icons -->
         <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
         <link rel="shortcut icon" href="/kpta/assets/media/favicons/favicon.png">
@@ -36,45 +24,6 @@
         <link rel="stylesheet" id="css-main" href="/kpta/assets/css/oneui.min.css">
     </head>
     <body>
-        <!-- Page Container -->
-        <!--
-            Available classes for #page-container:
-
-        GENERIC
-
-            'enable-cookies'                            Remembers active color theme between pages (when set through color theme helper Template._uiHandleTheme())
-
-        SIDEBAR & SIDE OVERLAY
-
-            'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
-            'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
-            'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
-            'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
-            'sidebar-dark'                              Dark themed sidebar
-
-            'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
-            'side-overlay-o'                            Visible Side Overlay by default
-
-            'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
-
-            'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
-
-        HEADER
-
-            ''                                          Static Header if no class is added
-            'page-header-fixed'                         Fixed Header
-
-        HEADER STYLE
-
-            ''                                          Light themed Header
-            'page-header-dark'                          Dark themed Header
-
-        MAIN CONTENT LAYOUT
-
-            ''                                          Full width Main Content if no class is added
-            'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
-            'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
-        -->
         <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
             <!-- Sidebar -->
             <nav id="sidebar" aria-label="Main Navigation">
@@ -170,14 +119,14 @@
                 <div class="content-side content-side-full">
                     <ul class="nav-main">
                         <li class="nav-main-item">
-                            <a class="nav-main-link active" href="dashboard">
+                            <a class="nav-main-link active" href="{{url('/dashboard')}}">
                                 <i class="nav-main-link-icon si si-speedometer"></i>
                                 <span class="nav-main-link-name">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-main-heading">Kerja Praktek</li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="/kpta/public/pengajuan">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
                                 <i class="nav-main-link-icon si si-book-open"></i>
                                 <span class="nav-main-link-name">Pengajuan KP</span>
                             </a>
@@ -218,12 +167,20 @@
                                         </li>
                                         <li class="nav-main-item">
                                             <a class="nav-main-link" href="/kpta/public/seminarkp/cetak_daftarhadir">
-                                                <span class="nav-main-link-name">Cetak Daftra Hadir Seminar KP</span>
+                                                <span class="nav-main-link-name">Cetak Daftar Hadir Seminar KP</span>
                                             </a>
                                         </li>
                             </ul>
                         </li>
+                        @if(\Session::get('level')==1)
                         <li class="nav-main-heading">Tugas Akhir</li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/ta/pengajuan')}}">
+                                <i class="nav-main-link-icon si si-book-open"></i>
+                                <span class="nav-main-link-name">Pengajuan TA</span>
+                            </a>
+                        </li>
+                        @endif
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon si si-wrench"></i>
@@ -257,30 +214,21 @@
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="#">
-                                        <span class="nav-main-link-name">Loaders</span>
+                                    <a class="nav-main-link" href="{{url('/pendadaran/cetak_persetujuan')}}" target="_blank">
+                                        <span class="nav-main-link-name">Cetak Persetujuan Sidang Pendadaran dan Seminar</span>
+                                    </a>
+                                </li>
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="{{url('/pendadaran/cetak_undangan')}}" target="_blank">
+                                        <span class="nav-main-link-name">Cetak Undangan Sidang Pendadaran Skripsi</span>
+                                    </a>
+                                </li>
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="{{url('/pendadaran/cetak_bukti')}}" target="_blank">
+                                        <span class="nav-main-link-name">Cetak Bukti Penyerahan Undangan Sidang Pendadaran</span>
                                     </a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="nav-main-heading">Panduan</li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon si si-doc"></i>
-                                <span class="nav-main-link-name">Panduan KP</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link"aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon si si-docs"></i>
-                                <span class="nav-main-link-name">Panduan TA</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link" href="#">
-                                <i class="nav-main-link-icon si si-arrow-right"></i>
-                                <span class="nav-main-link-name">Login</span>
-                            </a>
                         </li>
                     </ul>
                 </div>
@@ -307,33 +255,6 @@
                             <i class="fa fa-fw fa-ellipsis-v"></i>
                         </button>
                         <!-- END Toggle Mini Sidebar -->
-
-                        <!-- Apps Modal -->
-                        <!-- Opens the Apps modal found at the bottom of the page, after footerâ€™s markup -->
-                        <!--button type="button" class="btn btn-sm btn-dual mr-2" data-toggle="modal" data-target="#one-modal-apps">
-                            <i class="si si-grid"></i>
-                        </button-->
-                        <!-- END Apps Modal -->
-
-                        <!-- Open Search Section (visible on smaller screens) -->
-                        <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                        <!--button type="button" class="btn btn-sm btn-dual d-sm-none" data-toggle="layout" data-action="header_search_on">
-                            <i class="si si-magnifier"></i>
-                        </button-->
-                        <!-- END Open Search Section -->
-
-                        <!-- Search Form (visible on larger screens) -->
-                        <!--form class="d-none d-sm-inline-block" action="be_pages_generic_search.html" method="POST">
-                            <div class="input-group input-group-sm">
-                                <input type="text" class="form-control form-control-alt" placeholder="Search.." id="page-header-search-input2" name="page-header-search-input2">
-                                <div class="input-group-append">
-                                    <span class="input-group-text bg-body border-0">
-                                        <i class="si si-magnifier"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </form-->
-                        <!-- END Search Form -->
                     </div>
                     <!-- END Left Section -->
 
@@ -343,7 +264,7 @@
                         <div class="dropdown d-inline-block ml-2">
                             <button type="button" class="btn btn-sm btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded" src="/kpta/assets/media/avatars/avatar9.jpg" alt="Header Avatar" style="width: 18px;">
-                                <span class="d-none d-sm-inline-block ml-1">Adam</span>
+                                <span class="d-none d-sm-inline-block ml-1">{{Session::get('name')}}</span>
                                 <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-user-dropdown">
@@ -376,7 +297,7 @@
                                         <span>Lock Account</span>
                                         <i class="si si-lock ml-1"></i>
                                     </a>
-                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="op_auth_signin.html">
+                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{url('logout')}}">
                                         <span>Log Out</span>
                                         <i class="si si-logout ml-1"></i>
                                     </a>
@@ -601,23 +522,6 @@
             <!-- END Apps Modal -->
         </div>
         <!-- END Page Container -->
-
-        <!--
-            OneUI JS Core
-
-            Vital libraries and plugins used in all pages. You can choose to not include this file if you would like
-            to handle those dependencies through webpack. Please check out assets/_es6/main/bootstrap.js for more info.
-
-            If you like, you could also include them separately directly from the assets/js/core folder in the following
-            order. That can come in handy if you would like to include a few of them (eg jQuery) from a CDN.
-
-            assets/js/core/jquery.min.js
-            assets/js/core/bootstrap.bundle.min.js
-            assets/js/core/simplebar.min.js
-            assets/js/core/jquery-scrollLock.min.js
-            assets/js/core/jquery.appear.min.js
-            assets/js/core/js.cookie.min.js
-        -->
         <script src="/kpta/assets/js/oneui.core.min.js"></script>
 
         <!--
