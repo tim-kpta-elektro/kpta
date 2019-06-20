@@ -96,11 +96,6 @@
                                             <input type="text" class="js-datepicker form-control" id="example-datepicker3" name="tgl_mulai" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
                                         </div>
                                         <br>
-<<<<<<< Updated upstream
-=======
-                                        <br>
-                                        <br>
->>>>>>> Stashed changes
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                             <button type="submit" class="btn btn-danger">Cancel</button>
