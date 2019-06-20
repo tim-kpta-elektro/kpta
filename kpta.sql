@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : Local
+ Source Server         : DATABASE
  Source Server Type    : MySQL
- Source Server Version : 100137
+ Source Server Version : 100134
  Source Host           : localhost:3306
  Source Schema         : kpta
 
  Target Server Type    : MySQL
- Target Server Version : 100137
+ Target Server Version : 100134
  File Encoding         : 65001
 
- Date: 20/06/2019 14:38:35
+ Date: 20/06/2019 15:06:45
 */
 
 SET NAMES utf8mb4;
@@ -729,9 +729,12 @@ CREATE TABLE `ta`  (
   `id_ta` int(15) NOT NULL AUTO_INCREMENT,
   `judul` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `nim_mhs` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `keahlian` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `mk1` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `mk2` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `mk3` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `pembimbing1` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `id_seminar` int(15) NULL DEFAULT NULL,
-  `id_pendadaran` int(15) NULL DEFAULT NULL,
+  `tgl_pengajuan` date NULL DEFAULT NULL,
   `status_ta` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id_ta`) USING BTREE,
   INDEX `nim_mhs`(`nim_mhs`) USING BTREE,
@@ -743,7 +746,7 @@ CREATE TABLE `ta`  (
 -- ----------------------------
 -- Records of ta
 -- ----------------------------
-INSERT INTO `ta` VALUES (1, 'Absensi Face Recognition', 'I0716001', NULL, NULL, NULL, '');
+INSERT INTO `ta` VALUES (1, 'Absensi Face Recognition', 'I0716001', NULL, NULL, NULL, NULL, NULL, NULL, '');
 
 -- ----------------------------
 -- Table structure for users
