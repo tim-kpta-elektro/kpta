@@ -23,6 +23,14 @@
                             <form action="{{ url('/registerPost') }}" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group">
+                                    <label for="alamat">Name:</label>
+                                    <input type="text"  class="form-control" id="name" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="alamat">Username:</label>
+                                    <input type="text"  class="form-control" id="username" name="username">
+                                </div>
+                                <div class="form-group">
                                     <label for="email">Email:</label>
                                     <input type="email" class="form-control" id="email" name="email">
                                 </div>
@@ -33,10 +41,6 @@
                                 <div class="form-group">
                                     <label for="alamat">Password Confirmation:</label>
                                     <input type="password" class="form-control" id="confirmation" name="confirmation">
-                                </div>
-                                <div class="form-group">
-                                    <label for="alamat">Name:</label>
-                                    <input type="text"  class="form-control" id="name" name="name">
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-md btn-primary">Submit</button>

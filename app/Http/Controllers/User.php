@@ -34,11 +34,11 @@ class User extends Controller
         $email = $request->email;
         $password = $request->password;
 
-        $data = ModelUser::where('email',$email)->first();
+        $data = ModelUser::where('email',$email)->orWhere('username',$email)->first();
         if($data){ //apakah email tersebut ada atau tidak
             if(Hash::check($password,$data->password)){
                 Session::put('name',$data->name);
-                Session::put('email',$data->email);
+                //Session::put('email',$data->email);
                 Session::put('login',TRUE);
                 Session::put('level',$data->level);
                 return redirect('dashboard');
@@ -64,6 +64,7 @@ class User extends Controller
     public function registerPost(Request $request){
         $this->validate($request, [
             'name' => 'required|min:4',
+            'username' => 'required|min:4|unique:users',
             'email' => 'required|min:4|email|unique:users',
             'password' => 'required',
             'confirmation' => 'required|same:password',
@@ -71,6 +72,7 @@ class User extends Controller
 
         $data =  new ModelUser();
         $data->name = $request->name;
+        $data->username = $request->username;
         $data->email = $request->email;
         $data->password = bcrypt($request->password);
         $data->save();

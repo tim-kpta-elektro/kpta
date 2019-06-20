@@ -22,11 +22,19 @@ class DashController extends Controller
 
     public function home()
     {    	
-	    	$listkp = DB::table('daftar_kp')
-	    			->select('nim','mhs_nama','perusahaan_nama','perusahaan_almt')
-	    			->get();
-	    	$semkp = DB::table('seminar_kp')
-	    			->select('*')->get();
-	    	return view('dashboard',['listkp'=>$listkp,'semkp'=>$semkp]);	
+	    $listkp = DB::table('daftar_kp')
+	    		->select('nim','mhs_nama','perusahaan_nama','perusahaan_almt')
+	    		->get();
+	    $semkp = DB::table('seminar_kp')
+	    		->select('*')->get();
+	    $jumhs = DB::table('mahasiswa')
+	    		->count();
+	    $mhs_aktif = DB::table('mahasiswa')
+	    		->where('status_mhs','AKTIF')
+	    		->count();
+	    $mhs_lulus = DB::table('mahasiswa')
+	    		->where('status_mhs','LULUS')
+	    		->count();
+	    return view('dashboard',['listkp'=>$listkp,'semkp'=>$semkp,'jumhs'=>$jumhs,'mhs_aktif'=>$mhs_aktif,'mhs_lulus'=>$mhs_lulus]);	
     }
 }

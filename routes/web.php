@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 //Route Dashboard
 //Route::resource('/dashboard','DashController');
@@ -21,9 +21,9 @@ Route::get('/','Welcome@index');
 Route::get('/dashboard','DashController@home');
 
 //Route Kerja Praktek
-Route::get('/pengajuan','PkpController@index');
-Route::get('/pengajuan/cetak_surat','PkpController@cetak_surat');
-Route::get('/pengajuan/cetak_form','PkpController@cetak_form');
+Route::get('/kp/pengajuan','kp\PkpController@index');
+Route::get('/kp/pengajuan/cetak_surat','kp\PkpController@cetak_surat');
+Route::get('/kp/pengajuan/cetak_form','kp\PkpController@cetak_form');
 
 //Route Tugas Akhir
 //Route Pengajuan

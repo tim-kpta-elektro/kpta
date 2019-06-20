@@ -126,7 +126,7 @@
                         </li>
                         <li class="nav-main-heading">Kerja Praktek</li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/pengajuan')}}">
+                            <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/pengajuan')}}">
                                 <i class="nav-main-link-icon si si-book-open"></i>
                                 <span class="nav-main-link-name">Pengajuan KP</span>
                             </a>
@@ -280,7 +280,7 @@
                                         <span>Lock Account</span>
                                         <i class="si si-lock ml-1"></i>
                                     </a>
-                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="logout">
+                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{url('logout')}}">
                                         <span>Log Out</span>
                                         <i class="si si-logout ml-1"></i>
                                     </a>

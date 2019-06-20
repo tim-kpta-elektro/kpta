@@ -243,7 +243,7 @@
                             <a class="block block-rounded block-link-pop border-left border-primary border-4x" href="javascript:void(0)">
                                 <div class="block-content block-content-full">
                                     <div class="font-size-sm font-w600 text-uppercase text-muted">Total Mahasiswa</div>
-                                    <div class="font-size-h2 font-w400 text-dark">350</div>
+                                    <div class="font-size-h2 font-w400 text-dark">{{$jumhs}}</div>
                                 </div>
                             </a>
                         </div>
@@ -251,7 +251,7 @@
                             <a class="block block-rounded block-link-pop border-left border-primary border-4x" href="javascript:void(0)">
                                 <div class="block-content block-content-full">
                                     <div class="font-size-sm font-w600 text-uppercase text-muted">Mahasiswa Aktif</div>
-                                    <div class="font-size-h2 font-w400 text-dark">200</div>
+                                    <div class="font-size-h2 font-w400 text-dark">{{$mhs_aktif}}</div>
                                 </div>
                             </a>
                         </div>
@@ -259,7 +259,7 @@
                             <a class="block block-rounded block-link-pop border-left border-primary border-4x" href="javascript:void(0)">
                                 <div class="block-content block-content-full">
                                     <div class="font-size-sm font-w600 text-uppercase text-muted">Alumni</div>
-                                    <div class="font-size-h2 font-w400 text-dark">50</div>
+                                    <div class="font-size-h2 font-w400 text-dark">{{$mhs_lulus}}</div>
                                 </div>
                             </a>
                         </div>

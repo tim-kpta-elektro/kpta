@@ -24,8 +24,16 @@ class Welcome extends Controller
     	$listkp = DB::table('daftar_kp')
 	    			->select('nim','mhs_nama','perusahaan_nama','perusahaan_almt')
 	    			->get();
-	    	$semkp = DB::table('seminar_kp')
+	    $semkp = DB::table('seminar_kp')
 	    			->select('*')->get();
-	    	return view('welcome',['listkp'=>$listkp,'semkp'=>$semkp]);
+	    $jumhs = DB::table('mahasiswa')
+	    			->count();
+	    $mhs_aktif = DB::table('mahasiswa')
+	    			->where('status_mhs','AKTIF')
+	    			->count();
+	    $mhs_lulus = DB::table('mahasiswa')
+	    			->where('status_mhs','LULUS')
+	    			->count();
+	    	return view('welcome',['listkp'=>$listkp,'semkp'=>$semkp,'jumhs'=>$jumhs,'mhs_aktif'=>$mhs_aktif,'mhs_lulus'=>$mhs_lulus]);
     }
 }
