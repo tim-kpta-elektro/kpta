@@ -21,14 +21,26 @@ Route::get('/','Welcome@index');
 Route::get('/dashboard','DashController@home');
 
 //Route Kerja Praktek
-
 Route::get('/kp/pengajuan','kp\PkpController@index');
+Route::post('/kp/pengajuan/store','kp\PkpController@store');
+Route::post('/kp/pengajuan/update','kp\PkpController@update');
+//Route::get('/kp/pengajuan/show','kp\PkpController@show');
+Route::get('/kp/pengajuan/cetak_pengajuankp','kp\PkpController@cetak_pengajuankp');
+Route::get('/kp/pengajuan/cetak_konsul','kp\PkpController@cetak_konsul');
 Route::get('/kp/pengajuan/cetak_surat','kp\PkpController@cetak_surat');
 Route::get('/kp/pengajuan/cetak_form','kp\PkpController@cetak_form');
-Route::get('/kp/seminarkp','kp\PkpController@seminarkp');
-Route::get('/kp/seminarkp/cetak_surat_seminarkp','kp\PkpController@cetak_surat_seminarkp');
-Route::get('/kp/seminarkp/cetak_undangan','kp\PkpController@cetak_undangan');
-Route::get('/kp/seminarkp/cetak_daftarhadir','kp\PkpController@cetak_daftarhadir');
+//Pelaksanaan KP
+Route::get('/kp/pelaksanaan/cetak_lmbr_tugas','kp\PelaksanaanKP@cetak_lembartugas');
+Route::get('/kp/pelaksanaan/cetak_form_nilai','kp\PelaksanaanKP@cetak_formnilai');
+//Seminar KP
+Route::get('/kp/seminarkp','kp\SeminarKP@index');
+Route::post('/kp/seminarkp/store','kp\SeminarKP@store_sem');
+Route::post('/kp/seminarkp/update','kp\SeminarKP@update_sem');
+Route::get('/kp/seminarkp/cetak_seminarkp','kp\SeminarKP@cetak_pengajuansem');
+Route::get('/kp/seminarkp/cetak_undangan','kp\SeminarKP@cetak_undangan');
+Route::get('/kp/seminarkp/cetak_daftarhadir','kp\SeminarKP@cetak_daftarhadir');
+//Admin KP
+Route::get('/kp/pembimbing','kp\AdminKP@pemkp');
 
 
 //Route Tugas Akhir

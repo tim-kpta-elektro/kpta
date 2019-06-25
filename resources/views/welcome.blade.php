@@ -290,7 +290,7 @@
                                         <td class="text-center font-size-sm text-center">{{$no++}}</td>
                                         <td class="text-center font-size-sm text-center">{{$row->nim}}</td>
                                         <td class="font-w600 font-size-sm text-center">
-                                            <a href="#">{{$row->mhs_nama}}</a>
+                                            <a href="#">{{$row->nama_mhs}}</a>
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
                                             {{$row->perusahaan_nama}}
@@ -312,7 +312,6 @@
                             <h3 class="block-title">Seminar <small>Kerja Praktek</small></h3>
                         </div>
                         <div class="block-content block-content-full">
-                            <!-- DataTables init on table by adding .js-dataTable-buttons class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
                             <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
                                 <thead class="thead-dark">
                                     <tr>
@@ -334,16 +333,16 @@
                                         <td class="text-center font-size-sm text-center">{{$no++}}</td>
                                         <td class="text-center font-size-sm text-center">{{$row->nim}}</td>
                                         <td class="font-w600 font-size-sm text-center">
-                                            <a href="#">{{$row->mhs_nama}}</a>
+                                            <a href="#">{{$row->nama_mhs}}</a>
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            {{$row->judul_sem}}
+                                            {{$row->judul_seminar}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            {{$row->pembimbing}}
+                                            {{$row->nama_dosen}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            {{$row->tgl_sem}}
+                                            {{$row->tanggal}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
                                             {{$row->jam_mulai}}
@@ -352,7 +351,7 @@
                                             {{$row->jam_selesai}}
                                         </td>
                                         <td class="d-none d-sm-table-cell font-size-sm text-center">
-                                            {{$row->tempat}}
+                                            {{$row->nama_ruang}}
                                         </td>
                                       </tr>
                                     <?php endforeach; ?>

@@ -6,15 +6,13 @@
     <style type="text/css">
         
         table.table1 * {
-          border: none;
-          line-height: 1.1;
+            border: none;
+            line-height: 1.2;
         }
 
         .table1 td {
-          font-size: 14px;
-          vertical-align: text-top;
-          text-align: left;
-          padding: 2px;
+            vertical-align: text-top;
+            text-align: left;
         }
 
         table.table2 {
@@ -76,8 +74,8 @@
     <div class="container">
         <div class="row">
            <div class="col">
-            <p style="text-align: center; font-size: 18px;"><strong>LEMBAR KONSULTASI KERJA PRAKTEK</strong></p>
-               <table class="table1" style="width: 100%">    
+               <h2 style="text-align: center;">Lembar Konsultasi Tempat Kerja Praktek</h2>
+                <table class="table1" style="width: 100%">    
                     <tr>
                         <td style="width: 35%;">Nama Mahasiswa</td>
                         <td style="width: 3%;">:</td>
@@ -93,26 +91,6 @@
                         <td>:</td>
                         <td><strong>{{$data->nama_dosen}} / {{$data->nip}}</strong></td>
                     </tr>
-                    <tr>
-                        <td>Pembimbing Lapangan</td>
-                        <td>:</td>
-                        <td style="vertical-align: text-center;">______________________</td>
-                    </tr>
-                    <tr>
-                        <td>Tempat Kerja Praktek (KP)</td>
-                        <td>:</td>
-                        <td><strong>{{$data->perusahaan_nama}}</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Alamat Tempat KP</td>
-                        <td>:</td>
-                        <td><strong>{{$data->perusahaan_almt}}</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Tanggal Kerja Praktek (KP)</td>
-                        <td>:</td>
-                        <td><strong>{{$data->tgl_mulai_kp}} sd. {{$data->tgl_selesai_kp}} </strong></td>
-                    </tr>
                 </table>
                 <br>
                 <table class="table2">
@@ -121,129 +99,6 @@
                     <th style="width: 20%;" >Tanggal</th>
                     <th style="width: 65%;" >Uraian Kegiatan</th>
                     <th style="width: 10%;">Paraf Pembb.</th>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                </table>      
-           </div>     
-        </div>
-    </div>
-    <div class="page-break"></div>
-    <div class="container">
-        <div class="row">
-           <div class="col">
-               <table class="table2">
-                  <tr>
-                    <th style="width: 5%;">No</th>
-                    <th style="width: 20%;" >Tanggal</th>
-                    <th style="width: 65%;" >Uraian Kegiatan</th>
-                    <th style="width: 10%;">Paraf Pembb.</th>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
                   </tr>
                   <tr>
                       <td></td>

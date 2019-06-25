@@ -28,50 +28,53 @@
 <!-- Labels on top -->
 <div class="block">
     <div class="block-header">
-        <h3 class="block-title">Pengajuan Seminar Kerja Praktek</h3>
+        <h1 class="block-title" style="text-align: center; color: red;">Ditolak! Update Data Kerja Praktek!</h1>
     </div>
     <div class="block-content block-content-full">
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-md-3 col-lg-6">
                 <!-- Form Labels on top - Default Style -->
-                <form class="mb-5" action="{{url('/kp/seminarkp/store')}}" method="POST">
+                <form class="mb-5" action="{{url('/kp/seminarkp/update')}}" method="POST">
                 {{ csrf_field() }}
                 <h2 class="content-heading border-bottom mb-4 pb-2">Data Diri</h2>
                     <div class="form-group">
-                        <input type="hidden" class="form-control" name="id_kp" value="{{$data->id_kp}}">
+                        <input type="hidden" class="form-control" name="id_seminar" value="{{$test2->id_seminar}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" name="id_kp" value="{{$test2->id_kp}}">
                     </div>
                     <div class="form-group">
                         <label for="Nama">Nama</label>
-                        <input type="text" class="form-control" name="nama" value="{{$data->nama_mhs}}" readonly="readonly">
+                        <input type="text" class="form-control" name="nama" value="{{$test2->nama_mhs}}" readonly="readonly">
                     </div>
                     <div class="form-group">
                         <label for="Nim">NIM</label>
-                        <input type="text" class="form-control"name="nim" value="{{$data->nim}}" readonly="readonly">
+                        <input type="text" class="form-control"name="nim" value="{{$test2->nim}}" readonly="readonly">
                     </div>
                 <h2 class="content-heading border-bottom mb-4 pb-2">Data Akademik</h2>
                     <div class="form-group">
                         <label for="sks">Jumlah SKS Lulus</label>
-                        <input type="number" class="form-control" name="sks" value="{{$data->sks}}">
+                        <input type="number" class="form-control" name="sks" value="{{$test2->sks}}">
                     </div>
                     <div class="form-group">
                         <label for="IPK">IPK</label>
-                        <input type="text" class="form-control" name="ipk" value="{{$data->ipk}}">
+                        <input type="text" class="form-control" name="ipk" value="{{$test2->ipk}}">
                     </div>
                 <h2 class="content-heading border-bottom mb-4 pb-2">Judul Laporan KP</h2>
                     <div class="form-group">
                         <label for="nama perusahaan">Judul Laporan KP</label>
-                        <input type="text" class="form-control" name="judul_laporan" placeholder="Masukkan Judul Lapoaran KP..">
+                        <input type="text" class="form-control" name="judul_laporan" value="{{$test2->judul_seminar}}">
                     </div>
                 <h2 class="content-heading border-bottom mb-4 pb-2">Tanggal Pelaksanaan</h2>
                     <div class="form-group">
                         <label for="Tanggal Mulai">Tanggal Seminar KP</label>
-                        <input type="text" class="js-datepicker form-control" id="example-datepicker3" name="tgl_seminar" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
+                        <input type="text" class="js-datepicker form-control" id="example-datepicker3" name="tgl_seminar" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="yyyy-mm-dd" value="{{$test2->tanggal}}">
                     </div>
                     <div class="form-group">
                         <label for="Tanggal Mulai">Jam Mulai</label>
                         <div class="input-group date" id="datetimepicker5" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker5" name="jam_mulai" />
+                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker5" name="jam_mulai" value="{{$test2->jam_mulai}}" />
                             <div class="input-group-append" data-target="#datetimepicker5" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-clock"></i></div>
                             </div>
@@ -80,7 +83,7 @@
                     <div class="form-group">
                         <label for="Tanggal Mulai">Jam Selesai</label>
                         <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" name="jam_selesai" />
+                            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" name="jam_selesai" value="{{$test2->jam_selesai}}" />
                             <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-clock"></i></div>
                             </div>
@@ -89,6 +92,7 @@
                     <div class="form-group">
                         <label for="level">Ruang:</label>
                         <select class="form-control" id="ruang" name="ruang">
+                          <option selected="selected" value="{{$test2->ruang}}">{{$test2->nama_ruang}}</option>  
                           <option value="1">Ruang Kuliah 1</option>
                           <option value="2">Ruang Kuliah 2</option>
                           <option value="3">Ruang Kuliah 3</option>
