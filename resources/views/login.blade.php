@@ -4,7 +4,7 @@
     <section class="main-section">
         <!-- Add Your Content Inside -->
         <div class="content">
-            <div class="block">
+            <div class="block col-md-6 offset-md-3">
                 <div class="block-content">
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
@@ -31,9 +31,11 @@
                                     <label for="alamat">Password:</label>
                                     <input type="password" class="form-control" id="password" name="password"></input>
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-md btn-primary">Login</button>
-                                    <a href="{{url('register')}}" class="btn btn-md btn-warning">Register</a>
+                                <div class="form-group row justify-content-center">
+                                    <div class="col-md-6 col-xl-5">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-fw fa-sign-in-alt mr-1"></i> Login
+                                        </button>
+                                    </div>
                                 </div>
                             </form>        
                         </div>

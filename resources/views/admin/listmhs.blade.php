@@ -12,7 +12,7 @@
                     <th class="text-center" style="width: 20px">No</th>
                     <th class="text-center" style="width: 150px;">NIM</th>
                     <th class="d-none d-sm-table-cell text-center">Nama</th>
-                    <th class="d-none d-sm-table-cell text-center" style="width: 40%;">Pembimbing</th>
+                    <th class="d-none d-sm-table-cell text-center" style="width: 40%;">Pembimbing Akademik</th>
                     <th class="d-none d-sm-table-cell text-center" style="width: 20%;">Action</th>
                 </tr>
             </thead>
@@ -29,7 +29,7 @@
                         {{$row->nama_dosen}}
                     </td>
                     <td width="250" style="text-align: center;">
-                      <a href="{{url('/kp/pembimbing/'.$row->nim)}}" class="btn btn-sm btn-warning">Update</a>
+                      <a href="{{url('/admin/pembimbing/'.$row->nim)}}" class="btn btn-sm btn-warning">Update</a>
                     </td>
                   </tr>
                 <?php endforeach; ?>

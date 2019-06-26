@@ -11,66 +11,11 @@
  Target Server Version : 100137
  File Encoding         : 65001
 
- Date: 25/06/2019 08:09:45
+ Date: 26/06/2019 13:12:14
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for daftar_kp
--- ----------------------------
-DROP TABLE IF EXISTS `daftar_kp`;
-CREATE TABLE `daftar_kp`  (
-  `nim` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `mhs_nama` varchar(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `tgl_ajuan` datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  `sks_lulus` int(3) NULL DEFAULT NULL,
-  `ipk` float NULL DEFAULT NULL,
-  `perusahaan_nama` varchar(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `perusahaan_almt` varchar(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `perusahaan_jenis` varchar(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `pic` varchar(200) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `tgl_kp` date NULL DEFAULT NULL,
-  `tgl_sls_kp` date NULL DEFAULT NULL,
-  `judul_laporan` varchar(500) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `status` varchar(7) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  PRIMARY KEY (`nim`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of daftar_kp
--- ----------------------------
-INSERT INTO `daftar_kp` VALUES ('I0717026', 'Mohammad Raihan Hafiz', '2019-05-02 14:51:45', 90, 3.45, 'Garuda Indonesia', 'Cengkareng', 'Penerbangan', 'HRD', '2019-02-01', '2019-03-31', 'Pengembangan Web', '');
-INSERT INTO `daftar_kp` VALUES ('I0717030', 'Muhammad Rifai', '2019-05-02 14:53:49', 90, 335, 'PT Garuda Indonesia', 'Tangerang, Indonesia', 'Penerbangan', 'HRD', '2019-05-02', '2019-06-02', 'Pengembangan Aplikasi', '');
-
--- ----------------------------
--- Table structure for daftar_ta
--- ----------------------------
-DROP TABLE IF EXISTS `daftar_ta`;
-CREATE TABLE `daftar_ta`  (
-  `tgl_ajuan` datetime(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-  `mhs_nama` varchar(500) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `nim` varchar(8) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `kbk` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `ta_judul` varchar(150) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `mk_pilihan1` varchar(30) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `mk_pilihan2` varchar(30) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `mk_pilihan3` varchar(30) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `sks_lulus` int(3) NULL DEFAULT NULL,
-  `ipk_sementara` float NULL DEFAULT NULL,
-  `dosbing1` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `dosbing2` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`tgl_ajuan`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of daftar_ta
--- ----------------------------
-INSERT INTO `daftar_ta` VALUES ('2019-04-18 06:29:04', 'Wahyu Kurniawan', 'I0715035', 'SKI', 'Website', 'AI', 'SPK', 'ABW', 123, 3.21, 'Sutrisno', NULL);
-INSERT INTO `daftar_ta` VALUES ('2019-04-18 06:29:05', 'Arifian Tri Laksita', 'I0715005', 'sel', 'kontrol close loop kecepatan motor bldc', 'kualitas daya', 'Smart Grid', 'Satelit', 144, 3.12, 'Chico Hermanu', NULL);
-INSERT INTO `daftar_ta` VALUES ('2019-04-18 06:29:06', 'Ryoki Martfuadi', 'I0715032', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `daftar_ta` VALUES ('2019-04-18 20:15:12', 'Wahyu Kurniawan', 'I0715035', 'SKI', 'Website Untuk Pengembangan', 'SPK', 'ABW', 'AI', 123, 3.21, 'Sutrisno', 'Meiyanto');
 
 -- ----------------------------
 -- Table structure for dosen
@@ -87,39 +32,17 @@ CREATE TABLE `dosen`  (
 -- ----------------------------
 -- Records of dosen
 -- ----------------------------
-INSERT INTO `dosen` VALUES ('AUG001', NULL, 'Dr.Ir. Augustinus Sujono M.T.', 'AKTIF');
-INSERT INTO `dosen` VALUES ('CHI001', NULL, 'Chico Hermanu Brillianto Apribowo S.T., M.Eng.', 'AKTIF');
-INSERT INTO `dosen` VALUES ('DRM001', NULL, 'Dr. Miftahul Anwar S.Si., M.Eng.', 'AKTIF');
-INSERT INTO `dosen` VALUES ('FER001', 119008293, 'Feri Adriyanto, Ph.D.', 'AKTIF');
-INSERT INTO `dosen` VALUES ('HAR050', NULL, 'Hari Maghfiroh M.Eng.', 'AKTIF');
-INSERT INTO `dosen` VALUES ('IRW001', NULL, 'Irwan Iftadi S.T., M.Eng.', 'AKTIF');
+INSERT INTO `dosen` VALUES ('AUG001', 1951100120161001, 'Dr.Ir. Augustinus Sujono M.T.', 'AKTIF');
+INSERT INTO `dosen` VALUES ('CHI001', 198804162015041002, 'Chico Hermanu Brillianto Apribowo S.T., M.Eng.', 'AKTIF');
+INSERT INTO `dosen` VALUES ('DRM001', 1983032420130201, 'Dr. Miftahul Anwar S.Si., M.Eng.', 'AKTIF');
+INSERT INTO `dosen` VALUES ('FER001', 196801161999031001, 'Feri Adriyanto, Ph.D.', 'AKTIF');
+INSERT INTO `dosen` VALUES ('HAR050', 199104132018031001, 'Hari Maghfiroh M.Eng.', 'AKTIF');
+INSERT INTO `dosen` VALUES ('IRW001', 197004041996031002, 'Irwan Iftadi S.T., M.Eng.', 'AKTIF');
 INSERT INTO `dosen` VALUES ('MEI002', 197705132009121004, 'Meiyanto Eko Sulistyo S.T., M.Eng.', 'AKTIF');
-INSERT INTO `dosen` VALUES ('MUH015', NULL, 'Prof. Muhammad Nizam S.T,M.T,Ph.D.', 'AKTIF');
-INSERT INTO `dosen` VALUES ('MUH043', NULL, 'Muhammad Hamka Ibrahim St., M.Eng.', 'AKTIF');
-INSERT INTO `dosen` VALUES ('SUB012', NULL, 'Subuh Pramono S.T., M.T.', 'AKTIF');
-INSERT INTO `dosen` VALUES ('SUT034', NULL, 'Sutrisno S.T., M.Sc, Ph.D.', 'AKTIF');
-
--- ----------------------------
--- Table structure for kerjapraktek
--- ----------------------------
-DROP TABLE IF EXISTS `kerjapraktek`;
-CREATE TABLE `kerjapraktek`  (
-  `id_kerjapraktek` int(15) NOT NULL AUTO_INCREMENT,
-  `tgl_ajuan` datetime(0) NULL DEFAULT NULL,
-  `perusahaan_nama` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `perusahaan_almt` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `perusahaan_jenis` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `pic` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `tgl_mulai_kp` date NULL DEFAULT NULL,
-  `tgl_selesai_kp` date NULL DEFAULT NULL,
-  `status_kerjapraktek` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id_kerjapraktek`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of kerjapraktek
--- ----------------------------
-INSERT INTO `kerjapraktek` VALUES (1, '2019-05-22 10:19:04', 'Telkomsel', 'Jakarta Selatan', 'Telekomunikasi', 'General Manager', '2019-05-23', '2019-05-31', 'aktif');
+INSERT INTO `dosen` VALUES ('MUH015', 197007201999031001, 'Prof. Muhammad Nizam S.T,M.T,Ph.D.', 'AKTIF');
+INSERT INTO `dosen` VALUES ('MUH043', 1988122920161001, 'Muhammad Hamka Ibrahim St., M.Eng.', 'AKTIF');
+INSERT INTO `dosen` VALUES ('SUB012', 198106092003121002, 'Subuh Pramono S.T., M.T.', 'AKTIF');
+INSERT INTO `dosen` VALUES ('SUT034', 1987050620180701, 'Sutrisno S.T., M.Sc, Ph.D.', 'AKTIF');
 
 -- ----------------------------
 -- Table structure for kp
@@ -247,20 +170,20 @@ INSERT INTO `mahasiswa` VALUES ('I0716001', 'ADIP SAFIUDIN', 2016, 107, 3.45, 'A
 INSERT INTO `mahasiswa` VALUES ('I0716002', 'Adrian Seta Ekananda', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716003', 'Afif Yuhendrasmiko', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716004', 'AHMAD IMAM RAUYANI', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
-INSERT INTO `mahasiswa` VALUES ('I0716005', 'AMMAR GALIH GUMILANG', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
-INSERT INTO `mahasiswa` VALUES ('I0716006', 'Annisa Hanifa', 2016, NULL, NULL, NULL, NULL, 'HILANG');
-INSERT INTO `mahasiswa` VALUES ('I0716007', 'Aulia Ramadhani', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
+INSERT INTO `mahasiswa` VALUES ('I0716005', 'AMMAR GALIH GUMILANG', 2016, NULL, NULL, NULL, NULL, 'HILANG');
+INSERT INTO `mahasiswa` VALUES ('I0716006', 'Annisa Hanifa', 2016, NULL, NULL, NULL, 'IRW001', 'AKTIF');
+INSERT INTO `mahasiswa` VALUES ('I0716007', 'Aulia Ramadhani', 2016, NULL, NULL, NULL, NULL, 'HILANG');
 INSERT INTO `mahasiswa` VALUES ('I0716008', 'Axel Adam Mahendra', 2016, NULL, NULL, NULL, NULL, 'HILANG');
-INSERT INTO `mahasiswa` VALUES ('I0716009', 'AZIS UBAIDILAH', 2016, NULL, NULL, NULL, NULL, 'HILANG');
-INSERT INTO `mahasiswa` VALUES ('I0716010', 'BHADRIKA EVANDITO A', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
-INSERT INTO `mahasiswa` VALUES ('I0716011', 'BINTANG SUJATMIKO', 2016, NULL, NULL, NULL, NULL, 'HILANG');
+INSERT INTO `mahasiswa` VALUES ('I0716009', 'AZIS UBAIDILAH', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
+INSERT INTO `mahasiswa` VALUES ('I0716010', 'BHADRIKA EVANDITO A', 2016, NULL, NULL, NULL, NULL, 'HILANG');
+INSERT INTO `mahasiswa` VALUES ('I0716011', 'BINTANG SUJATMIKO', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716012', 'Daniel Aquino Purba', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
-INSERT INTO `mahasiswa` VALUES ('I0716013', 'ERDIAN DWI LAKSANA', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
-INSERT INTO `mahasiswa` VALUES ('I0716014', 'Fuad Nur Kuncoro', 2016, NULL, NULL, NULL, NULL, 'HILANG');
+INSERT INTO `mahasiswa` VALUES ('I0716013', 'ERDIAN DWI LAKSANA', 2016, NULL, NULL, NULL, NULL, 'HILANG');
+INSERT INTO `mahasiswa` VALUES ('I0716014', 'Fuad Nur Kuncoro', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716015', 'GHUFRON HUSNAN', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716016', 'Henry Probo Santoso', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716017', 'I Wayan Yoga K', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
-INSERT INTO `mahasiswa` VALUES ('I0716018', 'Kevin Sebastian', 2016, 107, 3.48, NULL, 'FER001', 'AKTIF');
+INSERT INTO `mahasiswa` VALUES ('I0716018', 'Kevin Sebastian', 2016, 107, 3.48, 'DRM001', 'FER001', 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716019', 'Krisna Hakim', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716020', 'MIFTAHUDDIN IRFANI', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716021', 'Mohamad Nisman Falic', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
@@ -270,7 +193,7 @@ INSERT INTO `mahasiswa` VALUES ('I0716024', 'MUHAMMAD THARIEQ P', 2016, NULL, NU
 INSERT INTO `mahasiswa` VALUES ('I0716025', 'MUHAMMAD ULIL `AZMI', 2016, NULL, NULL, NULL, NULL, 'HILANG');
 INSERT INTO `mahasiswa` VALUES ('I0716026', 'Musyaffa\' Ahmad', 2016, NULL, NULL, NULL, NULL, 'HILANG');
 INSERT INTO `mahasiswa` VALUES ('I0716027', 'OKI SETIAWAN', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
-INSERT INTO `mahasiswa` VALUES ('I0716028', 'Rilo Pambudi Aditya Wardani', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
+INSERT INTO `mahasiswa` VALUES ('I0716028', 'Rilo Pambudi Aditya Wardani', 2016, NULL, NULL, 'MEI002', NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716029', 'ROYANI AULIA IHSANTI', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716030', 'SALMAN AL FARISI', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
 INSERT INTO `mahasiswa` VALUES ('I0716031', 'TYAN WIDOTOMO', 2016, NULL, NULL, NULL, NULL, 'AKTIF');
@@ -517,7 +440,7 @@ CREATE TABLE `users`  (
   `updated_at` timestamp(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `users_email_unique`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of users
@@ -531,5 +454,6 @@ INSERT INTO `users` VALUES (6, 'Kevin Sebastian', 'I0716018', 'kevin@gmail.com',
 INSERT INTO `users` VALUES (7, 'Yudhi Kusuma', 'I0716034', 'yudhi@gmail.com', NULL, '$2y$10$dYXD6atlRz7d8AIy57jhy.GVl7tnmwfTlBroSNQfTlrZ1EOd0ysXe', 1, NULL, '2019-06-19 12:37:17', '2019-06-19 12:37:17');
 INSERT INTO `users` VALUES (8, 'Adip Safiudin', 'I0716001', 'adip@gmail.com', NULL, '$2y$10$3bpoyRNnqs01V0ihPEObjeHnW9LVBPteeHIAdKJitdLbLo1eKTh2.', 1, NULL, '2019-06-19 12:39:36', '2019-06-19 12:39:36');
 INSERT INTO `users` VALUES (9, 'Raihan', 'I0717005', 'raihan@gmail.com', NULL, '$2y$10$GzcIROkvPvGcPoepHZplvOB/IlP5/dj5JzxlHFIlilA6MOHpxVoRa', 1, NULL, '2019-06-20 07:16:51', '2019-06-20 07:16:51');
+INSERT INTO `users` VALUES (10, 'Annisa Hanifa', 'I0716006', 'annisa@gmail.com', NULL, '$2y$10$RcpsuZcoN.2VH4aYn00tzOs/aYyP.eeEdB2/5fkG5DahOQBqp/VUa', 1, NULL, '2019-06-26 05:21:28', '2019-06-26 05:21:28');
 
 SET FOREIGN_KEY_CHECKS = 1;

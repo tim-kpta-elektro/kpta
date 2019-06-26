@@ -58,6 +58,9 @@ class SeminarKP extends Controller
 			->where('nim_mhs',Session::get('nim'))
 			->where('status_kp','SETUJU')
 			->first();
+
+		$ruang=DB::table('ref_ruang')
+			->get();
 		//dd($test);
 		if ($test != null) { //sudah input dan disetujui
 			return view('kp/sem_pending',['test'=>$test]);
@@ -66,7 +69,7 @@ class SeminarKP extends Controller
 		}elseif ($test2 != null) { //sudah input tetapi ditolak
 			return view('kp/sem_ditolak',['test2'=>$test2]);
 		}elseif ($data != null) { //sudah input tetapi ditolak
-			return view('kp/seminarkp',['data'=>$data]);
+			return view('kp/seminarkp',['data'=>$data,'ruang'=>$ruang]);
 		}else{ //belum input
 			return view('kp/error3');	
 		}

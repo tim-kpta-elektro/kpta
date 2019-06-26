@@ -3,7 +3,7 @@
 <!-- Dynamic Table with Export Buttons -->
 <div class="block">
     <div class="block-header">
-        <h3 class="block-title">List <small>Mahasiswa</small></h3>
+        <h3 class="block-title">List <small>Pengajuan Kerja Praktek</small></h3>
     </div>
     <div class="block-content block-content-full">
         <table class="table table-bordered table-striped table-vcenter js-dataTable-full-pagination">
@@ -12,7 +12,7 @@
                     <th class="text-center" style="width: 20px">No</th>
                     <th class="text-center" style="width: 150px;">NIM</th>
                     <th class="d-none d-sm-table-cell text-center">Nama</th>
-                    <th class="d-none d-sm-table-cell text-center" style="width: 40%;">Pembimbing</th>
+                    <th class="d-none d-sm-table-cell text-center" style="width: 40%;">Perusahaan</th>
                     <th class="d-none d-sm-table-cell text-center" style="width: 20%;">Action</th>
                 </tr>
             </thead>
@@ -26,10 +26,10 @@
                         <a href="#">{{$row->nama_mhs}}</a>
                     </td>
                     <td class="d-none d-sm-table-cell font-size-sm text-center">
-                        {{$row->nama_dosen}}
+                        {{$row->perusahaan_nama}}
                     </td>
                     <td width="250" style="text-align: center;">
-                      <a href="{{url('/kp/pembimbing/'.$row->nim)}}" class="btn btn-sm btn-warning">Update</a>
+                      <a href="{{url('/kp/kerjapraktek/edit/'.$row->nim)}}" class="btn btn-sm btn-warning">Update</a>
                     </td>
                   </tr>
                 <?php endforeach; ?>

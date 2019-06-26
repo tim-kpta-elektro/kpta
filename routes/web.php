@@ -41,6 +41,20 @@ Route::get('/kp/seminarkp/cetak_undangan','kp\SeminarKP@cetak_undangan');
 Route::get('/kp/seminarkp/cetak_daftarhadir','kp\SeminarKP@cetak_daftarhadir');
 //Admin KP
 Route::get('/kp/pembimbing','kp\AdminKP@pemkp');
+Route::get('/kp/pembimbing/{id}', 'kp\AdminKP@pembimbing');
+Route::post('/kp/pembimbing/update', 'kp\AdminKP@updatepem');
+Route::get('/kp/kerjapraktek','kp\AdminKP@pengajuankp');
+Route::get('/kp/kerjapraktek/edit/{id}', 'kp\AdminKP@editkp');
+Route::post('/kp/kerjapraktek/update', 'kp\AdminKP@updatekp');
+Route::get('/kp/seminar','kp\AdminKP@seminarkp');
+Route::get('/kp/seminar/edit/{id}', 'kp\AdminKP@editsem');
+Route::post('/kp/seminar/update', 'kp\AdminKP@updatesem');
+//Admin
+Route::get('/admin/pembimbing','Admin@pemakademik');
+Route::get('/admin/pembimbing/{id}', 'Admin@pembimbing');
+Route::post('/admin/pembimbing/update', 'Admin@updatepem');
+Route::get('/admin/register', 'Admin@register');
+Route::post('/admin/registerPost', 'Admin@registerPost');
 
 
 //Route Tugas Akhir

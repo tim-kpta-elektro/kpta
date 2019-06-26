@@ -87,16 +87,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="level">Ruang:</label>
-                        <select class="form-control" id="ruang" name="ruang">
-                          <option value="1">Ruang Kuliah 1</option>
-                          <option value="2">Ruang Kuliah 2</option>
-                          <option value="3">Ruang Kuliah 3</option>
-                          <option value="4">Ruang Kuliah 4</option>
-                          <option value="5">Ruang Kaprodi</option>
-                          <option value="6">Ruang Sidang</option>
-                          <option value="7">Lab. Elektro</option>
-                        </select>
+                      <label for="acceptor">Ruang:</label>
+                      <select class="form-control selectpicker" name="ruang" id="ruang" onchange="autofill()" data-live-search="true">
+                      <option value="">Pilih Ruang</option>
+                      <?php foreach ($ruang as $ruangs): ?>
+                        <option name="ruang" value="{{ $ruangs->id_ruang }}">{{$ruangs->nama_ruang}}</option>
+                      <?php endforeach; ?>
+                      </select>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Submit</button>

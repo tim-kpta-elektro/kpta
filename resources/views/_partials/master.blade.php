@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="/kpta/assets/js/plugins/datatables/dataTables.bootstrap4.css">
 <link rel="stylesheet" href="/kpta/assets/js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css">
 <link rel="stylesheet" href="/kpta/assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+<link rel="stylesheet" href="/kpta/assets/css/bootstrap-select.min.css">
 
 <!-- Fonts and OneUI framework -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
@@ -215,11 +216,17 @@
                 </li>
                 @endif
                 @if(\Session::get('level')==2)
-                <li class="nav-main-heading">Kerja Praktek</li>
+                <li class="nav-main-heading">Admin</li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="">
+                    <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/admin/register')}}">
                         <i class="nav-main-link-icon si si-book-open"></i>
                         <span class="nav-main-link-name">Buat User</span>
+                    </a>
+                </li>
+                <li class="nav-main-item">
+                    <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/admin/pembimbing')}}">
+                        <i class="nav-main-link-icon si si-book-open"></i>
+                        <span class="nav-main-link-name">Pembimbing Akademik</span>
                     </a>
                 </li>
                 @endif
@@ -232,9 +239,15 @@
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="">
+                    <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/kerjapraktek')}}">
                         <i class="nav-main-link-icon si si-book-open"></i>
-                        <span class="nav-main-link-name">Mahasiswa KP</span>
+                        <span class="nav-main-link-name">Pengajuan KP</span>
+                    </a>
+                </li>
+                <li class="nav-main-item">
+                    <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('/kp/seminar')}}">
+                        <i class="nav-main-link-icon si si-book-open"></i>
+                        <span class="nav-main-link-name">Pengajuan Seminar KP</span>
                     </a>
                 </li>
                 @endif
@@ -580,6 +593,7 @@
 <script src="/kpta/assets/js/plugins/datatables/buttons/buttons.html5.min.js"></script>
 <script src="/kpta/assets/js/plugins/datatables/buttons/buttons.flash.min.js"></script>
 <script src="/kpta/assets/js/plugins/datatables/buttons/buttons.colVis.min.js"></script>
+<script src="/kpta/assets/js/bootstrap-select.min.js"></script>
 
 <!-- Page JS Code -->
 <script src="/kpta/assets/js/pages/be_pages_dashboard.min.js"></script>
