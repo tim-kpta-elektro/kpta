@@ -17,7 +17,7 @@ class SeminarKP extends Controller
         $this->middleware(function ($request, $next) {
 	        if(!Session::get('login')){
 	            return redirect('login')->with('alert','Kamu harus login dulu');
-	        }elseif (Session::get('level') !== 1) {
+	        }elseif (!Session::get('level') == 1) {
 	        	return redirect('dashboard');
 	        }else{
 	            return $next($request);
