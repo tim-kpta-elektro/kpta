@@ -24,32 +24,95 @@ class PengajuanController extends Controller
 
     public function pengajuan()
     {
+        $setuju = DB::table('ta')
+            ->where('nim_mhs', Session::get('nim'))
+            ->where('status_ta', 'SETUJU')
+            ->first();
+
+        $pending = DB::table('ta')
+            ->where('nim_mhs', Session::get('nim'))
+            ->where('status_ta', 'PENDING')
+            ->first();
+
+        $tolak = DB::table('ta')
+            ->where('nim_mhs', Session::get('nim'))
+            ->where('status_ta', 'TOLAK')
+            ->first();
+
         $data = DB::table('mahasiswa')
             ->where('nim', Session::get('nim'))
             ->first();
-        if ($data) {
-            $dosens = DB::table('dosen')
-                ->where('status_dosen', 'AKTIF')
-                ->orderBy('nama_dosen')
-                ->get();
+
+        $dosens = DB::table('dosen')
+            ->where('status_dosen', 'AKTIF')
+            ->orderBy('nama_dosen')
+            ->get();
+        $peminatans = DB::table('peminatan')
+            ->where('angkatan', $data->angkatan)
+            ->orderBy('nama_peminatan')
+            ->get();
+
+        if ($setuju != null) { //jika SETUJU ada isinya maka
+
+        } elseif ($pending != null) { //jika PENDING ada isinya maka
+            $pembimbing1 = DB::table('pembimbing')
+                ->join('dosen', 'dosen.kode_dosen', '=', 'pembimbing.pembimbing1')
+                ->where('id_ta', $pending->id_ta)
+                ->first();
+            $pembimbing2 = DB::table('pembimbing')
+                ->join('dosen', 'dosen.kode_dosen', '=', 'pembimbing.pembimbing2')
+                ->where('id_ta', $pending->id_ta)
+                ->first();
             $peminatans = DB::table('peminatan')
-                ->where('angkatan', $data->angkatan)
-                ->orderBy('kode')
+                ->where('id', $pending->kode_peminatan)
+                ->first();
+            $matkuls = DB::table('matkul')
+                ->where('id_ta', $pending->id_ta)
                 ->get();
+        // echo "<pre>";print_r($matkuls);exit;
+            return view('ta/pending_ta', [
+                'pending' => $pending,
+                'data' => $data,
+                'pembimbing1' => $pembimbing1,
+                'pembimbing2' => $pembimbing2,
+                'matkuls'     => $matkuls,
+                'peminatans' => $peminatans
+            ]);
+        } elseif ($tolak != null) { //jika TOLAK ada isinya maka
+            # code...
+        } elseif ($data != null) {
             return view('ta/pengajuan', [
                 'data' => $data,
                 'dosens' => $dosens,
                 'peminatans' => $peminatans
             ]);
         }
-        // echo "<pre>";print_r($dosen);exit;
+
+        // $data = DB::table('mahasiswa')
+        //     ->where('nim', Session::get('nim'))
+        //     ->first();
+        // if ($data) {
+        //     $dosens = DB::table('dosen')
+        //         ->where('status_dosen', 'AKTIF')
+        //         ->orderBy('nama_dosen')
+        //         ->get();
+        //     $peminatans = DB::table('peminatan')
+        //         ->where('angkatan', $data->angkatan)
+        //         ->orderBy('kode')
+        //         ->get();
+        //     return view('ta/pengajuan', [
+        //         'data' => $data,
+        //         'dosens' => $dosens,
+        //         'peminatans' => $peminatans
+        //     ]);
+        // }
         return abort(404);
     }
 
     public function store(Request $request)
     {
         // echo "<pre>";print_r($request);exit;
-		date_default_timezone_set('Asia/Jakarta');
+        date_default_timezone_set('Asia/Jakarta');
 
         $validatedData = $request->validate([
             'sks' => 'required|numeric',
@@ -81,12 +144,12 @@ class PengajuanController extends Controller
             'nim_mhs' => $request->nim,
             'abstrak' => $request->abstrak,
             'kode_peminatan' => $request->kode_peminatan,
-    		'tgl_pengajuan' => date('Y-m-d H:i:s'),
+            'tgl_pengajuan' => date('Y-m-d H:i:s'),
             'status_ta' => 'PENDING'
         ]);
         $id = DB::getPdo()->lastInsertId();;
         if ($ta) {
-            for($i=1;$i<=3;$i++){
+            for ($i = 1; $i <= 3; $i++) {
                 $mk = 'mk' . $i;
                 $kode_mk = 'kode_mk' . $i;
                 $nilai_mk = 'nilai_mk' . $i;
