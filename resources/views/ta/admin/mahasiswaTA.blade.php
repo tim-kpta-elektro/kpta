@@ -31,18 +31,20 @@
                             <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
                                 <thead class="thead-dark">
                                     <tr>
+                                        <th class="text-center font-size-sm text-center">nama</th>
                                         <th class="text-center font-size-sm text-center">nim</th>
                                         <th class="text-center font-size-sm text-center">judul</th>
-                                        <th class="text-center font-size-sm text-center">keahlian</th>
+                                        <th class="text-center font-size-sm text-center">angkatan</th>
                                         <th class="text-center font-size-sm text-center">action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach ($mahasiswa_ta as $row): ?>
                                         <tr>
+                                            <td class="text-center font-size-sm text-center">{{$row->nama_mhs}}</td>
                                             <td class="text-center font-size-sm text-center">{{$row->nim_mhs}}</td>
                                             <td class="text-center font-size-sm text-center">{{$row->judul}}</td>
-                                            <td class="text-center font-size-sm text-center">{{$row->keahlian}}</td>
+                                            <td class="text-center font-size-sm text-center">{{$row->angkatan}}</td>
                                             <td class="text-center font-size-sm text-center">
                                                 <button class="btn-sssm btn-info" data-toggle="modal" data-target="#view">View</button></td>
                                         </tr>

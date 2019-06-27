@@ -277,9 +277,15 @@
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="">
+                        <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('ta/admin/mahasiswaTA')}}">
                             <i class="nav-main-link-icon si si-book-open"></i>
                             <span class="nav-main-link-name">Mahasiswa TA</span>
+                        </a>
+                    </li>
+                    <li class="nav-main-item">
+                        <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('ta/admin/daftar_pengajuan')}}">
+                            <i class="nav-main-link-icon si si-book-open"></i>
+                            <span class="nav-main-link-name">Daftar Pengajuan TA</span>
                         </a>
                     </li>
                     @endif
