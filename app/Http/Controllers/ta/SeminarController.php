@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\ta;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
-use PDF;
 
-class PendadaranController extends Controller
+class SeminarController extends Controller
 {
     public function __construct()
     {
@@ -42,7 +42,7 @@ class PendadaranController extends Controller
                 ->where('id_ta', $ta->id_ta)
                 ->first();
 
-            return view('ta/pengajuan_pendadaran', [
+            return view('ta/pengajuan_seminar', [
                 'data'  => $data,
                 'ta'    => $ta,
                 'pembimbing1' => $pembimbing1,
@@ -52,21 +52,32 @@ class PendadaranController extends Controller
         return abort(404);
     }
 
-    public function cetak_persetujuan(){
+    public function store(Request $request)
+    {
+        // echo "<pre>";print_r($request);exit;
+        date_default_timezone_set('Asia/Jakarta');
 
-        $pdf = PDF::loadview('/ta/laporan/cetak_persetujuan');
-        return $pdf->stream();
-    }
+        $validatedData = $request->validate([
+            'tanggal' => 'required',
+            'tempat' => 'required',
+            'jam_mulai' => 'required',
+            'jam_selesai' => 'required',
+        ]);
 
-    public function cetak_undangan(){
-    	$pdf = PDF::loadview('/ta/laporan/cetak_undangan');
-    	return $pdf->stream();
-    }
-
-    public function cetak_bukti(){
-    	$pdf = PDF::loadview('/ta/laporan/cetak_bukti');
-    	return $pdf->stream();
+        $ta = DB::table('ta')
+            ->where('nim_mhs', Session::get('nim'))
+            ->first();
+        // echo "<pre>";print_r($ta->id_ta);exit;
+        if ($ta) {
+            DB::table('seminar_ta')->insert([
+                'id_ta' => $ta->id_ta,
+                'tanggal' => $request->tanggal,
+                'tempat' => $request->tempat,
+                'jam_mulai' => $request->jam_mulai,
+                'jam_selesai' => $request->jam_selesai,
+                'status_seminar' => 'PENDING'
+            ]);
+            return redirect('dashboard');
+        }
     }
 }
-
-?>

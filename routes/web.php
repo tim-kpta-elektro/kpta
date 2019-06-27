@@ -60,13 +60,21 @@ Route::post('/admin/registerPost', 'Admin@registerPost');
 //Route Tugas Akhir
 //Route Pengajuan
 Route::get('/ta/pengajuan','ta\PengajuanController@pengajuan');
+Route::post('/ta/pengajuan/store','ta\PengajuanController@store');
+
 //Route Laporan
 Route::get('/ta/laporan/daftar_hadir_dosen','ta\LaporanController@daftar_hadir_dosen');
 Route::get('/ta/laporan/berita_acara','ta\LaporanController@berita_acara');
 //Route Pendadaran
+Route::get('/ta/pengajuan_pendadaran','ta\PendadaranController@pengajuan');
+Route::post('/ta/pengajuan_pendadaran/store','ta\PendadaranController@store');
 Route::get('/pendadaran/cetak_persetujuan','ta\PendadaranController@cetak_persetujuan');
 Route::get('/pendadaran/cetak_undangan','ta\PendadaranController@cetak_undangan');
 Route::get('/pendadaran/cetak_bukti','ta\PendadaranController@cetak_bukti');
+//Route Seminar
+Route::get('/ta/pengajuan_seminar','ta\SeminarController@pengajuan');
+Route::post('/ta/pengajuan_seminar/store','ta\SeminarController@store');
+
 
 
 //User Login
