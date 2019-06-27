@@ -57,7 +57,7 @@
                             <select class="form-control" name="kode_peminatan">
                                 <option value="" selected="selected" disabled>--- Pilih ---</option>
                                 @foreach ($peminatans as $peminatan)
-                                <option value="{{$peminatan->kode}}">{{$peminatan->kode}} - {{$peminatan->nama_peminatan}}</option>
+                                <option value="{{$peminatan->id}}">{{$peminatan->kode}} - {{$peminatan->nama_peminatan}}</option>
                                 @endforeach
                             </select>
                         </div>

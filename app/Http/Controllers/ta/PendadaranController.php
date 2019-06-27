@@ -69,13 +69,13 @@ class PendadaranController extends Controller
             ->first();
         // echo "<pre>";print_r($ta->id_ta);exit;
         if ($ta) {
-            DB::table('seminar_ta')->insert([
+            DB::table('pendadaran')->insert([
                 'id_ta' => $ta->id_ta,
                 'tanggal' => $request->tanggal,
                 'tempat' => $request->tempat,
                 'jam_mulai' => $request->jam_mulai,
                 'jam_selesai' => $request->jam_selesai,
-                'status_seminar' => 'PENDING'
+                'status_pendadaran' => 'PENDING'
             ]);
             return redirect('dashboard');
         }
