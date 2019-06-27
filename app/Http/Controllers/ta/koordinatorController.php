@@ -36,10 +36,6 @@ class koordinatorController extends Controller{
         		->join('matkul','ta.id_ta','=','matkul.id_ta')
 	    		->select('*')
 	    		->get();
-
-	    $dosen = DB::table('dosen')
-	    		->select('*')
-	    		->get();
 	    		
 	    $pembimbing1_ta = DB::table('ta')
         		->join('pembimbing','ta.id_ta','=','pembimbing.id_ta')
@@ -53,7 +49,7 @@ class koordinatorController extends Controller{
 	    		->select('*')
 	    		->first();
 	    	
-	    return view('ta/admin/mahasiswaTA',['mahasiswa_ta'=>$mahasiswa_ta,'peminatan_ta'=>$peminatan_ta,'matkul_ta'=>$matkul_ta,'pembimbing1_ta'=>$pembimbing1_ta,'pembimbing2_ta'=>$pembimbing2_ta,'dosen'=>$dosen]);	
+	    return view('ta/admin/mahasiswaTA',['mahasiswa_ta'=>$mahasiswa_ta,'peminatan_ta'=>$peminatan_ta,'matkul_ta'=>$matkul_ta,'pembimbing1_ta'=>$pembimbing1_ta,'pembimbing2_ta'=>$pembimbing2_ta]);	
     }
 
 }

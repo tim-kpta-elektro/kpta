@@ -28,12 +28,6 @@
 					<td>{{$row->angkatan}}</td>
 				</tr>
 				<tr>
-					<th>Mata Kuliah Pendukung 1</th>
-					<th>:</th>
-					<td></td>
-					
-				</tr>
-				<tr>
 					<th>Pembimbing 1 <a style="color: red; font-size: 10px; vertical-align: top;">*)</a></th>
 					<th>:</th>
 					<td>
@@ -66,6 +60,25 @@
 					<td>{{$row->ipk}}</td>
 				</tr>
 			</thead>
+			<table class="table table-bordered table-striped table-vcenter ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="text-center" style="width: 80px;">Kode</th>
+                        <th class="d-none d-sm-table-cell text-center">Nama Mata Kuliah</th>
+                        <th class="d-none d-sm-table-cell text-center" style="width: 30%;">Nilai</th>
+                        <th class="d-none d-sm-table-cell text-center" style="width: 20%;">Huruf</th>
+                    </tr>
+                </thead>
+			<tbody>
+				<?php foreach ($matkul_ta as $matkuls):?>
+				<tr>
+					<td>{{$matkuls->kode_matkul}}</td>
+					<td>{{$matkuls->nama_matkul}}</td>
+					<td>{{$matkuls->ip}}</td>
+					<td>{{$matkuls->huruf}}</td>
+				</tr>
+			<?php endforeach;?>
+			</tbody>
 		</table>
 		<hr>
 		<p style="color: red; font-size: 15px;">*) Koordinator TA dapat mengganti pembimbing 1 dan 2</p>

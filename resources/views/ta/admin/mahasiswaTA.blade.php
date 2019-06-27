@@ -59,7 +59,7 @@
 
 <!-- Modal -->                    
 <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title text-center" id="myModalLabel" style="font-size: 25px">Rincian Pengajuan</h4>

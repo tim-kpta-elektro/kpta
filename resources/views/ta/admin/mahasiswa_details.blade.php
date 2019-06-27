@@ -23,34 +23,37 @@
 					<td>{{$peminatan_ta->nama_peminatan}}</td>
 				</tr>
 				<tr>
-					<th>Mata Kuliah Pendukung 1</th>
+					<th>Pembimbing 1</th>
 					<th>:</th>
-					<td></td>
+					<td>{{$pembimbing1_ta->nama_dosen}}</td>
 				</tr>
 				<tr>
-					<th>Mata Kuliah Pendukung 2</th>
+					<th>Pembimbing 2</th>
 					<th>:</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th>Mata Kuliah Pendukung 3</th>
-					<th>:</th>
-					<td></td>
-				</tr>
-				<tr>
-					<th>Pembimbing 1 <a style="color: red; font-size: 10px; vertical-align: top;">*)</a></th>
-					<th>:</th>
-					<td>
-						<select>
-							<?php foreach ($dosen as $dosens):?>
-							<option value="{{$dosens->kode_dosen}}" @if($pembimbing1_ta->nama_dosen=== $dosens->nama_dosen) selected='selected' @endif> {{strtoupper($dosens->nama_dosen)}}</option>
-						<?php endforeach;?>
-						</select>
-					</td>
+					<td>{{$pembimbing2_ta->nama_dosen}}</td>
 				</tr>
 			</thead>
 		</table>
+		<table class="table table-bordered table-striped table-vcenter ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="text-center" style="width: 80px;">Kode</th>
+                        <th class="d-none d-sm-table-cell text-center">Nama Mata Kuliah</th>
+                        <th class="d-none d-sm-table-cell text-center" style="width: 30%;">Nilai</th>
+                        <th class="d-none d-sm-table-cell text-center" style="width: 20%;">Huruf</th>
+                    </tr>
+                </thead>
+			<tbody>
+				<?php foreach ($matkul_ta as $matkuls):?>
+				<tr>
+					<td>{{$matkuls->kode_matkul}}</td>
+					<td>{{$matkuls->nama_matkul}}</td>
+					<td>{{$matkuls->ip}}</td>
+					<td>{{$matkuls->huruf}}</td>
+				</tr>
+			<?php endforeach;?>
+			</tbody>
+		</table>		
 		<hr>
-		<p style="color: red; font-size: 15px;">*) Koordinator TA dapat mengganti pembimbing 1 dan 2</p>
 	</div>
 </div>
