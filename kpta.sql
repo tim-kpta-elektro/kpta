@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : DATABASE
+ Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 100134
+ Source Server Version : 100137
  Source Host           : localhost:3306
  Source Schema         : kpta
 
  Target Server Type    : MySQL
- Target Server Version : 100134
+ Target Server Version : 100137
  File Encoding         : 65001
 
- Date: 27/06/2019 14:09:37
+ Date: 27/06/2019 16:06:43
 */
 
 SET NAMES utf8mb4;
@@ -493,20 +493,20 @@ CREATE TABLE `ta`  (
   `nim_mhs` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `judul` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `abstrak` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
-  `kode_peminatan` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `tgl_pengajuan` date NULL DEFAULT NULL,
   `status_ta` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `kode_peminatan` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id_ta`) USING BTREE,
   INDEX `nim_mhs`(`nim_mhs`) USING BTREE,
   INDEX `kode_peminatan`(`kode_peminatan`) USING BTREE,
   CONSTRAINT `ta_ibfk_1` FOREIGN KEY (`nim_mhs`) REFERENCES `mahasiswa` (`nim`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `ta_ibfk_2` FOREIGN KEY (`kode_peminatan`) REFERENCES `peminatan` (`kode`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `ta_ibfk_2` FOREIGN KEY (`kode_peminatan`) REFERENCES `peminatan` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ta
 -- ----------------------------
-INSERT INTO `ta` VALUES (18, 'I0716001', 'Implementasi Raspberry Pi untuk Keamanan dengan Pengenalan Wajah dan Sidik Jari', 'ini abstrak', 'SKI', '2019-06-27', 'PENDING');
+INSERT INTO `ta` VALUES (18, 'I0716001', 'Implementasi Raspberry Pi untuk Keamanan dengan Pengenalan Wajah dan Sidik Jari', 'ini abstrak', '2019-06-27', 'PENDING', 2);
 
 -- ----------------------------
 -- Table structure for users

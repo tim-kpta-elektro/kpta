@@ -58,6 +58,8 @@ Route::post('/admin/registerPost', 'Admin@registerPost');
 
 
 //Route Tugas Akhir
+Route::get('ta/admin/daftar_pengajuan','ta\DaftarPengajuanController@daftar_pengajuan');
+Route::get('ta/admin/mahasiswa_ta','ta\koordinatorController@mahasiswa_ta');
 //Route Pengajuan
 Route::get('/ta/pengajuan','ta\PengajuanController@pengajuan');
 Route::post('/ta/pengajuan/store','ta\PengajuanController@store');
