@@ -271,7 +271,7 @@
                     @if(\Session::get('level')==4)
                     <li class="nav-main-heading">Tugas Akhir</li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="">
+                        <a class="nav-main-link" aria-haspopup="true" aria-expanded="false" href="{{url('ta/admin/pembimbingTA')}}">
                             <i class="nav-main-link-icon si si-book-open"></i>
                             <span class="nav-main-link-name">Pembimbing TA</span>
                         </a>

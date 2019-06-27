@@ -46,10 +46,10 @@
 			<tbody>
 				<?php foreach ($matkul_ta as $matkuls):?>
 				<tr>
-					<td>{{$matkuls->kode_matkul}}</td>
-					<td>{{$matkuls->nama_matkul}}</td>
-					<td>{{$matkuls->ip}}</td>
-					<td>{{$matkuls->huruf}}</td>
+					<td class="text-center" style="width: 80px;">{{$matkuls->kode_matkul}}</td>
+					<td class="text-center" style="width: 80px;">{{$matkuls->nama_matkul}}</td>
+					<td class="text-center" style="width: 80px;">{{$matkuls->ip}}</td>
+					<td class="text-center" style="width: 80px;">{{$matkuls->huruf}}</td>
 				</tr>
 			<?php endforeach;?>
 			</tbody>

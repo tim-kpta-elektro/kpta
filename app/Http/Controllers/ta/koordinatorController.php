@@ -52,6 +52,14 @@ class koordinatorController extends Controller{
 	    return view('ta/admin/mahasiswaTA',['mahasiswa_ta'=>$mahasiswa_ta,'peminatan_ta'=>$peminatan_ta,'matkul_ta'=>$matkul_ta,'pembimbing1_ta'=>$pembimbing1_ta,'pembimbing2_ta'=>$pembimbing2_ta]);	
     }
 
+    public function pembimbingTA(){
+    	$dosen = DB::table('dosen')
+    			->select('*')
+    			->get();
+    			
+    	return view('ta/admin/pembimbingTA',['dosen'=>$dosen]);
+    }
+
 }
 
 ?>
