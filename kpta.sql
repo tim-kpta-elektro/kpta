@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : Local
+ Source Server         : DATABASE
  Source Server Type    : MySQL
- Source Server Version : 100137
+ Source Server Version : 100134
  Source Host           : localhost:3306
  Source Schema         : kpta
 
  Target Server Type    : MySQL
- Target Server Version : 100137
+ Target Server Version : 100134
  File Encoding         : 65001
 
- Date: 26/06/2019 13:12:14
+ Date: 27/06/2019 14:09:37
 */
 
 SET NAMES utf8mb4;
@@ -67,7 +67,7 @@ CREATE TABLE `kp`  (
 -- ----------------------------
 -- Records of kp
 -- ----------------------------
-INSERT INTO `kp` VALUES (1, 'I0716001', '2019-05-22 13:12:11', 'Telkomsel', 'Jakarta Selatan', 'Telekomunikasi', 'General Manager', '2019-05-23', '2019-05-31', 'PENDING');
+INSERT INTO `kp` VALUES (1, 'I0716001', '2019-05-22 13:12:11', 'Telkomsel', 'Jakarta Selatan', 'Telekomunikasi', 'General Manager', '2019-05-23', '2019-05-31', 'SETUJU');
 INSERT INTO `kp` VALUES (2, 'I0716034', '2019-06-22 12:05:00', 'Telkomsel', 'Jl. Gatot Subroto No.Kav. 52,RT.6/RW.1, Kuningan Bar.,Mampang Prpt., Kota JakartaSelatan, Daerah Khusus IbukotaJakarta 12710', 'Telekomunikasi', 'General Manager Up. Bapak Eko', '2019-06-22', '2019-06-29', 'SETUJU');
 INSERT INTO `kp` VALUES (3, 'I0716018', '2019-06-22 16:29:57', 'Telkomsel Jakarta', 'Jl.Gatot Subroto, Mampang prpt, Jakarta Selatan', 'Telekomunikasi', 'General Manager Up. Bapak Eko', '2019-06-22', '2019-06-30', 'TOLAK');
 
@@ -281,6 +281,29 @@ INSERT INTO `mahasiswa` VALUES ('I0718036', 'SYAUQY MAULANAR RAHMAN', 2018, NULL
 INSERT INTO `mahasiswa` VALUES ('I0718037', 'TAUFIK WIDYASTAMA', 2018, NULL, NULL, NULL, NULL, 'AKTIF');
 
 -- ----------------------------
+-- Table structure for matkul
+-- ----------------------------
+DROP TABLE IF EXISTS `matkul`;
+CREATE TABLE `matkul`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_ta` int(15) NULL DEFAULT NULL,
+  `nama_matkul` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `kode_matkul` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `ip` float NULL DEFAULT NULL,
+  `huruf` varchar(6) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `id_ta`(`id_ta`) USING BTREE,
+  CONSTRAINT `matkul_ibfk_1` FOREIGN KEY (`id_ta`) REFERENCES `ta` (`id_ta`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of matkul
+-- ----------------------------
+INSERT INTO `matkul` VALUES (13, 18, 'mk1', 'kode1', 4, 'A');
+INSERT INTO `matkul` VALUES (14, 18, 'mk2', 'kode2', 3.51, 'A-');
+INSERT INTO `matkul` VALUES (15, 18, 'mk3', 'kode3', 3.8, 'A');
+
+-- ----------------------------
 -- Table structure for migrations
 -- ----------------------------
 DROP TABLE IF EXISTS `migrations`;
@@ -307,6 +330,66 @@ CREATE TABLE `password_resets`  (
   `created_at` timestamp(0) NULL DEFAULT NULL,
   INDEX `password_resets_email_index`(`email`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Table structure for pembimbing
+-- ----------------------------
+DROP TABLE IF EXISTS `pembimbing`;
+CREATE TABLE `pembimbing`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_ta` int(15) NULL DEFAULT NULL,
+  `pembimbing1` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `pembimbing2` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `kode_dosen`(`pembimbing1`) USING BTREE,
+  INDEX `id_ta`(`id_ta`) USING BTREE,
+  INDEX `pembimbing2`(`pembimbing2`) USING BTREE,
+  CONSTRAINT `pembimbing_ibfk_1` FOREIGN KEY (`pembimbing1`) REFERENCES `dosen` (`kode_dosen`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `pembimbing_ibfk_2` FOREIGN KEY (`id_ta`) REFERENCES `ta` (`id_ta`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `pembimbing_ibfk_3` FOREIGN KEY (`pembimbing2`) REFERENCES `dosen` (`kode_dosen`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of pembimbing
+-- ----------------------------
+INSERT INTO `pembimbing` VALUES (4, 18, 'SUT034', 'HAR050');
+
+-- ----------------------------
+-- Table structure for peminatan
+-- ----------------------------
+DROP TABLE IF EXISTS `peminatan`;
+CREATE TABLE `peminatan`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `angkatan` int(10) NULL DEFAULT NULL,
+  `kode` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `nama_peminatan` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `kode`(`kode`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of peminatan
+-- ----------------------------
+INSERT INTO `peminatan` VALUES (1, 2016, 'SEL', 'Sistem Energi Listrik');
+INSERT INTO `peminatan` VALUES (2, 2016, 'MEKA', 'Mekatronika');
+INSERT INTO `peminatan` VALUES (3, 2016, 'SIE', 'Sistem Isyarat dan Elektronika');
+INSERT INTO `peminatan` VALUES (4, 2016, 'SKI', 'Sistem Komputer dan Informasi');
+INSERT INTO `peminatan` VALUES (5, 2015, 'SEL', 'Sistem Energi Listrik');
+INSERT INTO `peminatan` VALUES (6, 2015, 'MEKA', 'Mekatronika');
+INSERT INTO `peminatan` VALUES (7, 2015, 'SIE', 'Sistem Isyarat dan Elektronika');
+INSERT INTO `peminatan` VALUES (8, 2015, 'SKI', 'Sistem Komputer dan Informasi');
+INSERT INTO `peminatan` VALUES (9, 2014, 'SEL', 'Sistem Energi Listrik');
+INSERT INTO `peminatan` VALUES (10, 2014, 'MEKA', 'Mekatronika');
+INSERT INTO `peminatan` VALUES (11, 2014, 'SIE', 'Sistem Isyarat dan Elektronika');
+INSERT INTO `peminatan` VALUES (12, 2014, 'SKI', 'Sistem Komputer dan Informasi');
+INSERT INTO `peminatan` VALUES (13, 2017, 'SEL', 'Sistem Energi Listrik');
+INSERT INTO `peminatan` VALUES (14, 2017, 'MEKA', 'Mekatronika');
+INSERT INTO `peminatan` VALUES (15, 2017, 'SIE', 'Sistem Isyarat dan Elektronika');
+INSERT INTO `peminatan` VALUES (16, 2017, 'SKI', 'Sistem Komputer dan Informasi');
+INSERT INTO `peminatan` VALUES (17, 2018, 'SEL', 'Sistem Energi Listrik');
+INSERT INTO `peminatan` VALUES (18, 2018, 'MEKA', 'Mekatronika');
+INSERT INTO `peminatan` VALUES (19, 2018, 'SIE', 'Sistem Isyarat dan Elektronika');
+INSERT INTO `peminatan` VALUES (20, 2018, 'SKI', 'Sistem Komputer dan Informasi');
 
 -- ----------------------------
 -- Table structure for pendadaran
@@ -376,7 +459,7 @@ CREATE TABLE `seminar_kpp`  (
 -- ----------------------------
 -- Records of seminar_kpp
 -- ----------------------------
-INSERT INTO `seminar_kpp` VALUES (1, 1, 'Sewadaya Site', '2019-06-07', '13:35:44', '14:35:47', 1, 'PENDING');
+INSERT INTO `seminar_kpp` VALUES (1, 1, 'Sewadaya Site', '2019-06-07', '13:35:44', '14:35:47', 1, 'TOLAK');
 INSERT INTO `seminar_kpp` VALUES (5, 2, 'Sewadaya Site PT. Telkomsel Smart Office', '2019-06-29', '01:38:00', '02:38:00', 2, 'SETUJU');
 
 -- ----------------------------
@@ -384,17 +467,22 @@ INSERT INTO `seminar_kpp` VALUES (5, 2, 'Sewadaya Site PT. Telkomsel Smart Offic
 -- ----------------------------
 DROP TABLE IF EXISTS `seminar_ta`;
 CREATE TABLE `seminar_ta`  (
-  `id_seminar` int(15) NOT NULL,
+  `id_seminar` int(15) NOT NULL AUTO_INCREMENT,
   `id_ta` int(15) NOT NULL,
   `tanggal` date NOT NULL,
   `tempat` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `jam_mulai` time(6) NOT NULL,
-  `jam_selesai` time(6) NOT NULL,
-  `status_pendadaran` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `jam_mulai` time(0) NOT NULL,
+  `jam_selesai` time(0) NOT NULL,
+  `status_seminar` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id_seminar`) USING BTREE,
   INDEX `id_ta`(`id_ta`) USING BTREE,
   CONSTRAINT `seminar_ta_ibfk_1` FOREIGN KEY (`id_ta`) REFERENCES `ta` (`id_ta`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of seminar_ta
+-- ----------------------------
+INSERT INTO `seminar_ta` VALUES (1, 18, '2019-06-28', 'Ruang 1', '12:00:00', '13:30:00', 'PENDING');
 
 -- ----------------------------
 -- Table structure for ta
@@ -402,26 +490,23 @@ CREATE TABLE `seminar_ta`  (
 DROP TABLE IF EXISTS `ta`;
 CREATE TABLE `ta`  (
   `id_ta` int(15) NOT NULL AUTO_INCREMENT,
-  `judul` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `nim_mhs` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `keahlian` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `mk1` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `mk2` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `mk3` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `pembimbing1` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `judul` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `abstrak` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `kode_peminatan` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `tgl_pengajuan` date NULL DEFAULT NULL,
   `status_ta` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id_ta`) USING BTREE,
   INDEX `nim_mhs`(`nim_mhs`) USING BTREE,
-  INDEX `pembimbing2`(`pembimbing1`) USING BTREE,
+  INDEX `kode_peminatan`(`kode_peminatan`) USING BTREE,
   CONSTRAINT `ta_ibfk_1` FOREIGN KEY (`nim_mhs`) REFERENCES `mahasiswa` (`nim`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `ta_ibfk_2` FOREIGN KEY (`pembimbing1`) REFERENCES `dosen` (`kode_dosen`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  CONSTRAINT `ta_ibfk_2` FOREIGN KEY (`kode_peminatan`) REFERENCES `peminatan` (`kode`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ta
 -- ----------------------------
-INSERT INTO `ta` VALUES (1, 'Absensi Face Recognition', 'I0716001', NULL, NULL, NULL, NULL, NULL, NULL, '');
+INSERT INTO `ta` VALUES (18, 'I0716001', 'Implementasi Raspberry Pi untuk Keamanan dengan Pengenalan Wajah dan Sidik Jari', 'ini abstrak', 'SKI', '2019-06-27', 'PENDING');
 
 -- ----------------------------
 -- Table structure for users
