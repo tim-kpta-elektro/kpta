@@ -11,7 +11,7 @@
  Target Server Version : 100137
  File Encoding         : 65001
 
- Date: 27/06/2019 16:06:43
+ Date: 29/06/2019 06:14:31
 */
 
 SET NAMES utf8mb4;
@@ -347,12 +347,13 @@ CREATE TABLE `pembimbing`  (
   CONSTRAINT `pembimbing_ibfk_1` FOREIGN KEY (`pembimbing1`) REFERENCES `dosen` (`kode_dosen`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `pembimbing_ibfk_2` FOREIGN KEY (`id_ta`) REFERENCES `ta` (`id_ta`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `pembimbing_ibfk_3` FOREIGN KEY (`pembimbing2`) REFERENCES `dosen` (`kode_dosen`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of pembimbing
 -- ----------------------------
 INSERT INTO `pembimbing` VALUES (4, 18, 'SUT034', 'HAR050');
+INSERT INTO `pembimbing` VALUES (5, 19, 'AUG001', 'MEI002');
 
 -- ----------------------------
 -- Table structure for peminatan
@@ -501,12 +502,13 @@ CREATE TABLE `ta`  (
   INDEX `kode_peminatan`(`kode_peminatan`) USING BTREE,
   CONSTRAINT `ta_ibfk_1` FOREIGN KEY (`nim_mhs`) REFERENCES `mahasiswa` (`nim`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `ta_ibfk_2` FOREIGN KEY (`kode_peminatan`) REFERENCES `peminatan` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of ta
 -- ----------------------------
 INSERT INTO `ta` VALUES (18, 'I0716001', 'Implementasi Raspberry Pi untuk Keamanan dengan Pengenalan Wajah dan Sidik Jari', 'ini abstrak', '2019-06-27', 'PENDING', 2);
+INSERT INTO `ta` VALUES (19, 'I0716018', 'Sistem Analisis CV', 'ini abstrak', '2019-06-27', 'SETUJU', 1);
 
 -- ----------------------------
 -- Table structure for users

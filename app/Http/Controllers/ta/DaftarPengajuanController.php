@@ -55,14 +55,14 @@ class DaftarPengajuanController extends Controller{
 	    return view('ta/admin/daftar_pengajuan',['mahasiswa_ta'=>$mahasiswa_ta,'peminatan_ta'=>$peminatan_ta,'matkul_ta'=>$matkul_ta,'pembimbing1_ta'=>$pembimbing1_ta,'pembimbing2_ta'=>$pembimbing2_ta,'dosen'=>$dosen]);	
     }
 
-    public function store(Request $request){
+    public function update(Request $request){
     	dd($request->all());
-    	DB::table('pembimbing')->where('id_ta',$request->id_ta)->get([
+    	DB::table('pembimbing')->where('id_ta',$request->id_ta)->update([
 			'pembimbing1' => $request->pembimbing1,
 			'pembimbing2' => $request->pembimbing2,			
     	]);
 
-    	DB::table('ta')->where('id_ta',$request->id_ta)->get([
+    	DB::table('ta')->where('id_ta',$request->id_ta)->update([
     		'status_ta' => 'SETUJU',
     	]);
 
