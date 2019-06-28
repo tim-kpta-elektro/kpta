@@ -11,7 +11,7 @@
                                 <ol class="breadcrumb breadcrumb-alt">
                                     <li class="breadcrumb-item">Home</li>
                                     <li class="breadcrumb-item" aria-current="page">
-                                        <a class="link-fx" href="">Form Pengajuan TA</a>
+                                        <a class="link-fx" href="{{url('ta/admin/daftar_pengajuan')}}">Daftar Pengajuan TA</a>
                                     </li>
                                 </ol>
                             </nav>

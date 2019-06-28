@@ -5,13 +5,13 @@
                     <div class="content content-full">
                         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
                             <h1 class="flex-sm-fill h3 my-2">
-                                Daftar Mahasiswa TA
+                                Pembimbing TA
                             </h1>
                             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                                 <ol class="breadcrumb breadcrumb-alt">
                                     <li class="breadcrumb-item">Home</li>
                                     <li class="breadcrumb-item" aria-current="page">
-                                        <a class="link-fx" href="">Form Pengajuan TA</a>
+                                        <a class="link-fx" href="{{url('ta/admin/pembimbingTA')}}">Daftar Pembimbing TA</a>
                                     </li>
                                 </ol>
                             </nav>
@@ -25,7 +25,7 @@
                     <!-- Labels on top -->
                     <div class="block">
                         <div class="block-header">
-                            <h3 class="block-title">Daftar Mahasiswa TA</h3>
+                            <h3 class="block-title">Daftar Pembimbing TA</h3>
                         </div>
                         <div class="block-content block-content-full">
                             <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
