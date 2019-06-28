@@ -71,7 +71,7 @@
                 @include('ta/admin.mahasiswa_details')
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-success">Approve</button>
+            <button type="cancel" class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
     </div>
   </div>

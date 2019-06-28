@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-12">	
 		<table class="table table-borderless table-hover">
 			<thead>
 				<tr>
@@ -31,7 +31,7 @@
 					<th>Pembimbing 1 <a style="color: red; font-size: 10px; vertical-align: top;">*)</a></th>
 					<th>:</th>
 					<td>
-						<select>
+						<select name="pembimbing1">
 							<?php foreach ($dosen as $dosens):?>
 							<option value="{{$dosens->kode_dosen}}" @if($pembimbing1_ta->nama_dosen=== $dosens->nama_dosen) selected='selected' @endif> {{strtoupper($dosens->nama_dosen)}}</option>
 						<?php endforeach;?>
@@ -42,7 +42,7 @@
 					<th>Pembimbing 2 <a style="color: red; font-size: 10px; vertical-align: top;">*)</a></th>
 					<th>:</th>
 					<td>
-						<select>
+						<select name="pembimbing2">
 							<?php foreach ($dosen as $dosens):?>
 							<option value="{{$dosens->kode_dosen}}" @if($pembimbing2_ta->nama_dosen=== $dosens->nama_dosen) selected='selected' @endif> {{strtoupper($dosens->nama_dosen)}}</option>
 						<?php endforeach;?>

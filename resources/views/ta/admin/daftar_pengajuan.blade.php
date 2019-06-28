@@ -57,6 +57,8 @@
                     </div>
                     <!-- END Labels on top -->
 
+<form method="post" action="{{url('ta/admin/pengajuan/store')}}" id="form">
+    @csrf
 <!-- Modal -->                    
 <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
@@ -76,6 +78,7 @@
     </div>
   </div>
 </div>
+</form>
 <!-- END Modal -->
 
 
