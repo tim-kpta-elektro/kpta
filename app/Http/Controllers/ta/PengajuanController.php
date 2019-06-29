@@ -53,7 +53,28 @@ class PengajuanController extends Controller
             ->get();
 
         if ($setuju != null) { //jika SETUJU ada isinya maka
-
+            $pembimbing1 = DB::table('pembimbing')
+                ->join('dosen', 'dosen.kode_dosen', '=', 'pembimbing.pembimbing1')
+                ->where('id_ta', $setuju->id_ta)
+                ->first();
+            $pembimbing2 = DB::table('pembimbing')
+                ->join('dosen', 'dosen.kode_dosen', '=', 'pembimbing.pembimbing2')
+                ->where('id_ta', $setuju->id_ta)
+                ->first();
+            $peminatans = DB::table('peminatan')
+                ->where('id', $setuju->kode_peminatan)
+                ->first();
+            $matkuls = DB::table('matkul')
+                ->where('id_ta', $setuju->id_ta)
+                ->get();
+            return view('ta/setuju_ta', [
+                'setuju' => $setuju,
+                'data' => $data,
+                'pembimbing1' => $pembimbing1,
+                'pembimbing2' => $pembimbing2,
+                'matkuls'     => $matkuls,
+                'peminatans' => $peminatans
+            ]);
         } elseif ($pending != null) { //jika PENDING ada isinya maka
             $pembimbing1 = DB::table('pembimbing')
                 ->join('dosen', 'dosen.kode_dosen', '=', 'pembimbing.pembimbing1')
@@ -69,7 +90,7 @@ class PengajuanController extends Controller
             $matkuls = DB::table('matkul')
                 ->where('id_ta', $pending->id_ta)
                 ->get();
-        // echo "<pre>";print_r($matkuls);exit;
+            // echo "<pre>";print_r($matkuls);exit;
             return view('ta/pending_ta', [
                 'pending' => $pending,
                 'data' => $data,

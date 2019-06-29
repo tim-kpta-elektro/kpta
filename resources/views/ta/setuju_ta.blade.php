@@ -24,10 +24,10 @@
     <!-- Labels on top -->
     <div class="block">
         <div class="block-header">
-            <h1 class="block-title" style="text-align: center; color: orange;">Menunggu Persetujuan Admin Tugas Akhir</h1>
+            <h1 class="block-title" style="text-align: center; color: green;">Pengajuan Telah Disetujui</h1>
         </div>
         <div class="block-content block-content-full">
-            <p><strong>Mohon Cetak</strong> <a href="#" class="btn btn-sm btn-primary" target="_blank">Lembar Pengajuan TA</a></p>
+            <p><a href="#" class="btn btn-sm btn-primary" target="_blank">Lembar Konsul</a></p>
             <div>
                 <table class="table">
                     <tr>
@@ -52,11 +52,11 @@
                     </tr>
                     <tr>
                         <td>Judul:</td>
-                        <td><strong>{{$pending->judul}}</strong></td>
+                        <td><strong>{{$setuju->judul}}</strong></td>
                     </tr>
                     <tr>
                         <td>Abstrak:</td>
-                        <td><strong>{{$pending->abstrak}}</strong></td>
+                        <td><strong>{{$setuju->abstrak}}</strong></td>
                     </tr>
                     <tr>
                         <td>Pembimbing 1:</td>
