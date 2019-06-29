@@ -49,7 +49,7 @@ class SeminarController extends Controller
                 'pembimbing2' => $pembimbing2,
             ]);
         }
-        return abort(404);
+        return view('ta/belum_ta');
     }
 
     public function store(Request $request)
