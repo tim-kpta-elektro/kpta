@@ -15,7 +15,7 @@ class Admin extends Controller
         $this->middleware(function ($request, $next) {
 	        if(!Session::get('login')){
 	            return redirect('login')->with('alert','Kamu harus login dulu');
-	        }elseif (Session::get('level') !== 2) {
+	        }elseif (!Session::get('level') == 2) {
 	        	return redirect('dashboard');
 	        }else{
 	            return $next($request);
