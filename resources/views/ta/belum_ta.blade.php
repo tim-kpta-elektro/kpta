@@ -1,3 +1,6 @@
+@extends('_partials/master')
+@section('konten')
+<!-- Hero -->
 <div class="content">
     <!-- Labels on top -->
     <div class="block">
@@ -7,3 +10,5 @@
     </div>
     <!-- END Labels on top -->
 </div>
+
+@endsection
